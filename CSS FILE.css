@@ -27,11 +27,6 @@ html, body {
 .Freeshipping p {
    color: black;
    font-family: "Trebuchet MS", Helvetica, sans-serif;
-   padding: 10px;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   bottom: 7px;
    margin: 0;
    position: relative;
    font-weight: 900;
@@ -39,10 +34,18 @@ html, body {
 .Freeshipping {
   background: gainsboro;
   height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.topbar {
+  display: flex;
+  background-color: black;
+  justify-content: center;
+  justify-items: center;
 }
 .topbar li {
-  display: inline;
-  position: relative;
+  display: flex;
   padding: 17px;
   left: 13%;
   color: white;
@@ -52,81 +55,54 @@ html, body {
   font-weight: bold;
 }
 .topbar ul {
-  background: black;
-  padding: 30px;
-  margin: 0%;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  border: 0;
   z-index: 0;
 }
-.Thethird {
-  background-color: lightgrey;
-  padding: 20px;
-  margin-top: -90px;
-  z-index: 5;
-}
-.Thethird p {
-  color: black;
-  font-family: "Trebuchet MS", Helvetica, sans-serif;
-  padding: 10px;
+.containertop1 {
   display: flex;
+  margin-left: -8%;
+  padding: 0;
+  border: 0;
+  justify-content: right;
   align-items: center;
-  justify-content: center;
-  margin: 0;
-  position: relative;
-  font-weight: 900;
-  z-index: 5;
-
+  flex-grow: 1;
+  flex-shrink: 0;
 }
-.Account{
-  position: relative;
+.Logoicon button {
+  background: transparent;
+  border: none;
+  margin: none;
+  font-size:0;
 }
-.Account img {
-    position: absolute;
-    left: 87%;
-    bottom: 45px;
-    z-index: 1;
-    filter: drop-shadow(0px 5px 10px 0px greenyellow);
-    }
-    .Account img:hover {
-      transform: translateY(1px);
-    }
-.Wishlist {
-  position: relative;
-}
-.Wishlist img {
-    position: absolute;
-    left: 84%;
-    bottom: 63px;
-    z-index: 1;
-}
-.Wishlist img:hover {
+.Logoicon img:hover {
   transform: translateY(1px);
 }
-.Shoppingcart {
-  position: relative;
+.containertop2 {
+  display: flex;
+  margin: 1rem;
+  padding: 0;
+  border: 0;
+  align-items: center;
+  flex-grow: 1;
+  flex-shrink: 0;
 }
-.Shoppingcart img {
-    position: absolute;
-    left: 81%;
-    bottom: 81px;
-    z-index: 1;
+.containertop3 {
+  display: flex;
+  margin: 1rem;
+  padding: 0;
+  border: 0;
+  align-items: center;
+  flex-grow: 0;
+  flex-shrink: 0;
 }
-.Shoppingcart img:hover {
-  transform: translateY(1px);
-}
-.Searchicon {
-  position: relative;
-}
-.Searchicon img {
-  position: absolute;
-  left: 68.7%;
-  bottom: 102px;
-  z-index: 2;
-}
-.Searchicon img:hover {
-  transform: translateY(1px);
-}
-.Searchbar{
-  position: relative;
+.Searchbar {
+  display: flex;
+  height: 40px;
+  width: 200px;
+  margin: 0rem;
 }
 .Searchbar input {
   overflow: hidden;
@@ -134,13 +110,9 @@ html, body {
   color: white;
   border-color: black;
   transition: box-shadow 0.5s;
-  position: absolute;
-  left: 68.5%;
-  margin-top: -133px;
-  z-index: 1;
-  height: 35px;
+  height: 40px;
   width: 200px;
-  text-indent: 35px;
+  text-indent: 10px;
   text-overflow: clip;
   outline: none;
   border-radius: 8px 8px 8px 8px;
@@ -153,6 +125,25 @@ html, body {
   opacity: 70%;
   letter-spacing: 0px;
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+.containertop4 {
+  display: flex;
+  margin-right: -8%;
+  padding: 0;
+  border: 0;
+  gap: 1rem;
+  align-items: center;
+  flex-grow: 1;
+  flex-shrink: 0;
+}
+.Account img:hover {
+  transform: translateY(1px);
+}
+.Wishlist img:hover {
+  transform: translateY(1px);
+}
+.Shoppingcart img:hover {
+  transform: translateY(1px);
 }
 .Account button {
   background: transparent;
@@ -172,33 +163,25 @@ html, body {
   margin: none;
   font-size:0;
 }
-.Searchicon button {
-  background: transparent;
-  border: none;
-  margin: none;
-  font-size:0;
+.Thethird {
+  display: flex;
+  background-color: lightgrey;
+  padding: 20px;
+  z-index: 1;
+  justify-content: center;
+  align-items: center;
 }
-.Logoicon button {
-  background: transparent;
-  border: none;
-  margin: none;
-  font-size:0;
-}
-.Logoicon {
+.Thethird p {
+  color: black;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
   position: relative;
-  z-index: 101;
-}
-.Logoicon img {
-  position: absolute;
-  bottom: 90px;
-  left: 190px;
-  z-index: 2;
-}
-.Logoicon img:hover {
-  transform: translateY(1px);
-}
-body {
-  min-height: 100vh;
+  font-weight: 900;
+  z-index: 5;
 }
 .topbar {
   position: sticky;
