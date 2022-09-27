@@ -49,7 +49,7 @@ html, body {
   display: flex;
   background-color: black;
   justify-content: center;
-  justify-items: center;
+  align-items: center;
 }
 .topbar li {
   display: flex;
@@ -211,73 +211,68 @@ html, body {
   z-index: 100;
   top: -1px;
 }
-.Newlooks h1 {
-  color: black;
-  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0;
-  position: relative;
-  font-weight: 900;
-  font-size: 80px;
-  letter-spacing: -4px;
-}
 .Newlooks {
   background-color: lightblue;
   padding: 45px;
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Newlooks h1 {
+  color: black;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  margin: 0;
+  font-weight: 900;
+  font-size: 80px;
+  letter-spacing: -4px;
+  flex-shrink: 0;
 }
 .Newlooks p {
   color: black;
   font-family: Courier;
   padding: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  bottom: 7px;
   margin: 0;
-  position: relative;
   font-weight: 900;
   letter-spacing: 1px;
   font-size: 20px;
-}
-.savana {
-  position: absolute;
-  left: 52%;
-  margin-top: -12%;
+  flex-shrink: 0;
 }
 .Fashion1 {
-  position: relative;
+  display: flex;
   background-color: lightsalmon;
-  padding: 12.8%;
+  padding: 1rem;
 }
 .Fashion1 h1 {
   color: black;
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
   margin: 0;
-  position: relative;
   font-weight: 900;
   font-size: 70px;
   letter-spacing: -4px;
-  right: 15%;
 }
 .Fashion1 p {
   color: black;
   font-family: Courier;
   margin: 0;
-  position: relative;
   font-size: 40px;
-  right: 15%;
 }
-.shopnow1 {
-  position: relative;
+.fashionL {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  flex-grow: 1;
+}
+.fashionR {
+  display: flex;
+  justify-content: right;
+  align-items: center;
 }
 .shopnow1 h1 {
-  position: absolute;
   z-index: 3;
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-  bottom: 200px;
-  left: 35px;
   font-size: 15px;
   background-color: black;
   color: white;
@@ -291,6 +286,7 @@ html, body {
   background: transparent;
   border: none;
   margin: none;
+  padding-top: 0.5rem;
   font-size:0;
 }
 .shopnow1 h1:hover {
