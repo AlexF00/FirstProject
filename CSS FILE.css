@@ -139,7 +139,7 @@ html, body {
   font-size:0;
 }
 .Searchbar img {
-  transition: all 0.5s ease-in-out;
+  transition: all 200ms ease-in-out;
 }
 .Searchbar img:hover {
   transform:scale(1.2)
@@ -562,6 +562,7 @@ a {
   padding: 0;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 .ftgrid {
   display: grid;
