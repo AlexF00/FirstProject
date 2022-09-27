@@ -54,7 +54,6 @@ html, body {
 .topbar li {
   display: flex;
   padding: 17px;
-  left: 13%;
   color: white;
   font-family: Courier;
   font-size: 18px;
@@ -321,7 +320,7 @@ html, body {
   display: grid;
   overflow-x: auto;
   overflow-y: hidden;
-  padding-bottom: 1.5rem;
+  padding-bottom: 1rem;
 }
 .promvideo {
   justify-content: center;
@@ -387,18 +386,24 @@ body ::-webkit-scrollbar-track {
 .grid a {
   z-index: 50;
 }
+.base1 img, .base2 img, .base3 img, .base4 img, .base5 img, .base6 img, .base7 img, .base8 img, .base9 img, .base10 img {
+  transition: all 150ms ease-in-out;
+}
+.base1 img:hover, .base2 img:hover, .base3 img:hover, .base4 img:hover, .base5 img:hover, .base6 img:hover, .base7 img:hover, .base8 img:hover, .base9 img:hover, .base10 img:hover {
+  transform:scale(0.95)
+}
 .base1 img:hover + h2, .base2 img:hover + h2, .base3 img:hover + h2, .base4 img:hover + h2, .base5 img:hover + h2, .base6 img:hover + h2, .base7 img:hover + h2, .base8 img:hover + h2, .base9 img:hover + h2, .base10 img:hover + h2 {
-  transform:translateY(3px)
+  transform:translateY(-3px)
 }
 .base1 img:hover + h2 + h3, .base2 img:hover + h2 + h3, .base3 img:hover + h2 + h3, .base4 img:hover + h2 + h3, .base5 img:hover + h2 + h3, .base6 img:hover + h2 + h3, .base7 img:hover + h2 + h3, .base8 img:hover + h2 + h3, .base9 img:hover + h2 + h3, .base10 img:hover + h2 + h3 {
-  transform:translateY(3px)
+  transform:translateY(-3px)
 }
 h2 {
   font-family: "Trebuchet MS", Helvetica, sans-serif;
   color: black;
   font-weight: 900;
   padding-top: 8px;
-  transition: all 0.2s ease-in-out;
+  transition: all 150ms ease-in-out;
 }
 h3 {
   font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
@@ -408,7 +413,7 @@ h3 {
   left: 153.5px;
   margin-right: 100%;
   margin-bottom: -10%;
-  transition: all 0.2s ease-in-out;
+  transition: all 150ms ease-in-out;
 }
 a {
   text-decoration: none;
@@ -552,7 +557,7 @@ a {
 .contacts {
   display: flex;
   background-color: rgb(24, 24, 24);
-  margin-top: 5rem;
+  margin-top: 4rem;
   border: 0;
   padding: 0;
   justify-content: center;
@@ -565,6 +570,7 @@ a {
   justify-content: center;
   justify-items: center;
   margin-top: 3rem;
+  margin-bottom: 2rem;
 }
 .ftgrid ul {
   color: darkgrey;
