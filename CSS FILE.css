@@ -26,10 +26,17 @@ html, body {
 }
 .Freeshipping p {
    color: black;
-   font-family: "Trebuchet MS", Helvetica, sans-serif;
+   font-family: Courier;
    margin: 0;
-   position: relative;
-   font-weight: 900;
+   cursor: pointer;
+   font-size: 18px;
+   font-weight: 600;
+   text-decoration: underline 0.10em rgba(255, 255, 255, 0);
+   transition: text-decoration-color 250ms;
+   flex-shrink: 0;
+}
+.Freeshipping p:hover {
+  text-decoration-color: black;
 }
 .Freeshipping {
   background: gainsboro;
@@ -101,7 +108,7 @@ html, body {
 .Searchbar {
   display: flex;
   height: 40px;
-  width: 200px;
+  width: 250px;
   margin: 0rem;
 }
 .Searchbar input {
@@ -125,6 +132,18 @@ html, body {
   opacity: 70%;
   letter-spacing: 0px;
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+.Searchbar button {
+  background: transparent;
+  border: none;
+  margin: none;
+  font-size:0;
+}
+.Searchbar img {
+  transition: all 0.5s ease-in-out;
+}
+.Searchbar img:hover {
+  transform:scale(1.2)
 }
 .containertop4 {
   display: flex;
@@ -173,15 +192,19 @@ html, body {
 }
 .Thethird p {
   color: black;
-  font-family: "Trebuchet MS", Helvetica, sans-serif;
-  padding: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  font-family: Courier;
+  padding: 5px;
   margin: 0;
-  position: relative;
-  font-weight: 900;
   z-index: 5;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: underline 0.10em rgba(255, 255, 255, 0);
+  transition: text-decoration-color 250ms;
+  flex-shrink: 0;
+}
+.Thethird p:hover {
+  text-decoration-color: black;
 }
 .topbar {
   position: sticky;
