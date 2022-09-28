@@ -55,6 +55,8 @@ html, body {
   background-color: black;
   justify-content: center;
   align-items: center;
+  position: sticky;
+  top: -1px;
 }
 .containertop2 li {
   display: flex;
@@ -113,7 +115,7 @@ html, body {
   display: flex;
   height: 40px;
   width: 250px;
-  margin: 0rem;
+  margin: 0;
 }
 .Searchbar input {
   overflow: hidden;
@@ -141,13 +143,15 @@ html, body {
   background: transparent;
   border: none;
   margin: none;
+  margin-right: 10px;
   font-size:0;
 }
-.Searchbar img {
+.Searchbar i {
+  transform: scale(1.2);
   transition: all 200ms ease-in-out;
 }
-.Searchbar img:hover {
-  transform:scale(1.2)
+.Searchbar i:hover {
+  transform:scale(1.4)
 }
 .containertop4 {
   display: flex;
@@ -159,14 +163,14 @@ html, body {
   flex-grow: 1;
   flex-shrink: 0;
 }
-.Account img:hover {
-  transform: translateY(1px);
+.Account i:hover {
+  transform: translateY(1px) scale(1.2);
 }
-.Wishlist img:hover {
-  transform: translateY(1px);
+.Wishlist i:hover {
+  transform: translateY(1px) scale(1.2);
 }
-.Shoppingcart img:hover {
-  transform: translateY(1px);
+.Shoppingcart i:hover {
+  transform: translateY(1px) scale(1.2);
 }
 .Account button {
   background: transparent;
@@ -184,12 +188,15 @@ html, body {
   margin: none;
 }
 .Menu button {
-    background: transparent;
-    border: none;
-    margin: none;
+  background: transparent;
+  border: none;
+  margin: none;
 }
-.gg-menu-right-alt {
+.gg-menu-right-alt, .gg-profile, .gg-shopping-cart, .gg-crown, .gg-search {
   color: white;
+}
+.containertop4 i {
+  transform: scale(1.2);
 }
 .Menu i {
   display: none;
@@ -224,12 +231,18 @@ html, body {
     justify-content: center;
     gap: 0.5rem;
   }
-  .containertop4 img {
-    height: 1.5em;
-    width: 1.5em;
+  .containertop4 i {
+    transform: none;
+  }
+  .containertop4 i:hover {
+    transform: none;
   }
   .Menu i {
     display: block;
+  }
+  .Logoicon img:hover {
+    transform: none;
+    transition: none;
   }
 }
 .Thethird {
@@ -263,11 +276,6 @@ html, body {
   .Thethird p {
     font-size: 10px;
   }
-}
-.topbar {
-  position: sticky;
-  z-index: 100;
-  top: -1px;
 }
 .Newlooks {
   background-color: lightblue;
