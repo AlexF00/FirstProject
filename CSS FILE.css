@@ -45,13 +45,18 @@ html, body {
   justify-content: center;
   align-items: center;
 }
+@media (max-width: 500px) {
+  .Freeshipping p {
+    font-size: 10px;
+  }
+}
 .topbar {
   display: flex;
   background-color: black;
   justify-content: center;
   align-items: center;
 }
-.topbar li {
+.containertop2 li {
   display: flex;
   padding: 17px;
   color: white;
@@ -60,7 +65,7 @@ html, body {
   letter-spacing: 3px;
   font-weight: bold;
 }
-.topbar ul {
+.containertop2 ul {
   display: flex;
   padding: 0;
   margin: 0;
@@ -167,19 +172,65 @@ html, body {
   background: transparent;
   border: none;
   margin: none;
-  font-size:0;
 }
 .Wishlist button {
   background: transparent;
   border: none;
   margin: none;
-  font-size:0;
 }
 .Shoppingcart button {
   background: transparent;
   border: none;
   margin: none;
-  font-size:0;
+}
+.Menu button {
+    background: transparent;
+    border: none;
+    margin: none;
+}
+.gg-menu-right-alt {
+  color: white;
+}
+.Menu i {
+  display: none;
+}
+@media (max-width: 500px) {
+  .topbar {
+    min-height: 3rem;
+  }
+  .containertop1 {
+    align-items: center;
+    justify-content: left;
+    margin-left: 3%;
+  }
+  .containertop1 img {
+    height: 50px;
+    width: 50px;
+  }
+  .containertop2 {
+    display: none;
+  }
+  .containertop3 {
+    display: none;
+  }
+  .containertop3 input {
+    height: 0px;
+    width: 0px;
+    color: transparent;
+    pointer-events: none;
+  }
+  .containertop4 {
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  .containertop4 img {
+    height: 1.5em;
+    width: 1.5em;
+  }
+  .Menu i {
+    display: block;
+  }
 }
 .Thethird {
   display: flex;
@@ -204,6 +255,14 @@ html, body {
 }
 .Thethird p:hover {
   text-decoration-color: black;
+}
+@media (max-width: 500px) {
+  .Thethird {
+    max-height: 0.5em;
+  }
+  .Thethird p {
+    font-size: 10px;
+  }
 }
 .topbar {
   position: sticky;
@@ -622,4 +681,10 @@ a {
   border: 0;
   font-size: 20px;
   font-family: courier;
+}
+@media (max-width: 500px) {
+  .ftgrid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
 }
