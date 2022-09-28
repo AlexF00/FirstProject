@@ -233,9 +233,11 @@ html, body {
   }
   .containertop4 i {
     transform: none;
+    transition: none;
   }
   .containertop4 i:hover {
     transform: none;
+    transition: none;
   }
   .Menu i {
     display: block;
