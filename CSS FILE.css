@@ -566,8 +566,9 @@ a {
 }
 .ftgrid {
   display: grid;
-  grid-template-columns: 500px 500px 500px;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 2rem;
+  width: 85%;
   justify-content: center;
   justify-items: center;
   margin-top: 3rem;
@@ -604,8 +605,8 @@ a {
   text-indent: 10px;
   text-overflow: clip;
   outline: none;
-  height: 50px;
-  width: 400px;
+  height: 3em;
+  width: 23em;
   transition: box-shadow 0.5s;
   outline: none;
   border-width: 1px;
