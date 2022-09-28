@@ -314,7 +314,7 @@ html, body {
   padding-bottom: 2rem;
 }
 .grid {
-  grid-template-columns: repeat(10, 200px);
+  grid-template-columns: repeat(10, 1fr);
   scroll-snap-type: x mandatory;
   gap: 1rem;
   display: grid;
@@ -566,7 +566,7 @@ a {
 }
 .ftgrid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   width: 85%;
   justify-content: center;
