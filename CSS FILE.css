@@ -49,6 +49,9 @@ html, body {
   .Freeshipping p {
     font-size: 10px;
   }
+  .Freeshipping {
+    min-height: 2em;
+  }
 }
 .topbar {
   display: flex;
@@ -291,51 +294,43 @@ html, body {
 }
 .Newlooks {
   background-image: linear-gradient(lightblue, skyblue);
-  padding: 45px;
   display: flex;
   flex-direction: column;
-  display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
+  padding: 3em;
 }
 .Newlooks h1 {
   color: black;
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
   margin: 0;
   font-weight: 900;
-  font-size: 80px;
-  letter-spacing: -4px;
-  max-width: 100%;
+  font-size: 4.5em;
 }
 .Newlooks p {
   color: black;
   font-family: Courier;
-  padding: 10px;
+  padding: 0.5em;
   margin: 0;
   font-weight: 900;
-  letter-spacing: 1px;
-  font-size: 20px;
-  max-width: 100%;
+  letter-spacing: 0.1em;
+  font-size: 1.2em;
+}
+@media (max-width: 500px) {
+  .Newlooks {
+    padding: 1em;
+  }
+  .Newlooks h1 {
+    font-size: 1em;
+  }
+  .Newlooks p {
+    font-size: 0.5em;
+  }
 }
 .Fashion1 {
   display: flex;
   background-image: linear-gradient(to bottom, salmon, lightsalmon);
   padding: 1rem;
-}
-.Fashion1 h1 {
-  color: black;
-  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-  margin: 0;
-  font-weight: 900;
-  font-size: 70px;
-  letter-spacing: -4px;
-}
-.Fashion1 p {
-  color: black;
-  font-family: Courier;
-  margin: 0;
-  font-size: 40px;
 }
 .fashionL {
   display: flex;
@@ -344,11 +339,21 @@ html, body {
   align-items: left;
   flex-grow: 1;
 }
-.fashionR {
-  display: flex;
-  justify-content: right;
-  align-items: center;
-  align-self: center;
+.fashionL h1 {
+  color: black;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  margin: 0;
+  font-weight: 900;
+  font-size: 4.5em;
+  letter-spacing: -0.2rem;
+  width: 100%;
+}
+.fashionL p {
+  color: black;
+  font-family: Courier;
+  margin: 0;
+  font-size: 2.5em;
+  width: 100%;
 }
 .shopnow1 h1 {
   z-index: 3;
@@ -373,6 +378,58 @@ html, body {
   background-color: #404040;
   transition-duration: 0.3s;
   cursor: pointer;
+}
+.fashionR {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  align-self: center;
+}
+.fashionR img {
+  width: 80%;
+  height: 80%;
+}
+@media (max-width: 500px) {
+  .Fashion1 {
+    background-image: none;
+    padding: 0rem;
+    flex-direction: column-reverse;
+  }
+  .fashionL {
+    position: relative;
+    transform: translate(0, -4.55em);
+    z-index: 3;
+    padding-left: 1em;
+    padding-right: 1em;
+    box-sizing: border-box;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5);
+  }
+  .fashionL h1 {
+    font-size: 1.2em;
+    letter-spacing: 0.8px;
+    color: white;
+  }
+  .fashionL p {
+    font-size: 0.7em;
+    color: white;
+  }
+  .shopnow1 {
+    position: relative;
+    margin-right: 1em;
+    align-self: flex-end;
+    bottom: 2.5em;
+  }
+  .shopnow1 h1 {
+    font-size: 0.5rem;
+    z-index: 5;
+    color: white;
+    margin: 0;
+    padding: 0.5rem;
+  }
+  .fashionR img {
+    width: 100%;
+  }
 }
 .Summer {
   display: flex;
@@ -411,7 +468,7 @@ html, body {
   position: relative;
 }
 .promvideo video {
-  max-width: 100%;
+  width: 100%;
 }
 body ::-webkit-scrollbar {
   width: 5px;
@@ -538,15 +595,19 @@ a {
   display: flex;
   flex-direction: row;
   gap: 2rem;
-  align-items: center;
-  justify-content: center;
   margin-top: 2rem;
+  align-items: center;
+  justify-content: space-between;
 }
 .sport1 {
   display: flex;
+  width: 100%;
+  height: 100%;
 }
 .sport2 {
   display: flex;
+  width: 100%;
+  height: 100%;
 }
 .shopnow2 {
   display: flex;
@@ -557,35 +618,24 @@ a {
 .shopnow2 h1 {
   z-index: 3;
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-  bottom: 200px;
-  left: 35px;
-  font-size: 15px;
+  font-size: 1rem;
   background-color: lightgrey;
+  padding: 1em;
   color: black;
-  padding: 15px;
   font-weight: 600;
   letter-spacing: 2px;
   transition: all 0.3s ease-in-out;
   box-shadow: 5px 5px black;
-  margin-top: 10px;
-  max-width: 129px;
-  max-height: 47px;
 }
 .shopnow2 button {
   background: transparent;
   border: none;
   margin: none;
   font-size:0;
-  display: flex;
-  justify-content: center;
-  justify-items: center;
 }
 .shopnow2 p {
   display: flex;
-  justify-content: center;
-  justify-items: center;
-  margin-top: 20px;
-  font-size: 30px;
+  font-size: 2rem;
   font-family: Courier;
 }
 .shopnow2 h1:hover {
@@ -602,35 +652,23 @@ a {
 .shopnow3 h1 {
   z-index: 3;
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-  bottom: 200px;
-  left: 35px;
-  font-size: 15px;
+  font-size: 1rem;
   background-color: lightgrey;
   color: black;
-  padding: 15px;
+  padding: 1em;
   font-weight: 600;
   letter-spacing: 2px;
   transition: all 0.3s ease-in-out;
   box-shadow: 5px 5px black;
-  margin-top: 10px;
-  max-width: 129px;
-  max-height: 47px;
 }
 .shopnow3 button {
   background: transparent;
   border: none;
   margin: none;
   font-size:0;
-  display: flex;
-  justify-content: center;
-  justify-items: center;
 }
 .shopnow3 p {
-  display: flex;
-  justify-content: center;
-  justify-items: center;
-  margin-top: 20px;
-  font-size: 30px;
+  font-size: 2rem;
   font-family: Courier;
 }
 .shopnow3 h1:hover {
