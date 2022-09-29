@@ -39,8 +39,8 @@ html, body {
   text-decoration-color: black;
 }
 .Freeshipping {
-  background: gainsboro;
-  height: 25px;
+  background-color: gainsboro;
+  min-height: 2.5em;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -250,7 +250,9 @@ html, body {
 }
 .Thethird {
   display: flex;
-  background-color: lightgrey;
+  flex-direction: column;
+  background-color: lightgray;
+  min-height: 3.5em;
   padding: 20px;
   z-index: 1;
   justify-content: center;
@@ -272,22 +274,30 @@ html, body {
 .Thethird p:hover {
   text-decoration-color: black;
 }
+.Thethird span {
+  color: black;
+  font-family: Courier;
+  padding: 5px;
+  margin: 0;
+  z-index: 5;
+  font-size: 15px;
+  font-weight: 600;
+  flex-shrink: 0;
+}
 @media (max-width: 500px) {
   .Thethird {
-    max-height: 0.5em;
-  }
-  .Thethird p {
-    font-size: 10px;
+    display: none;
   }
 }
 .Newlooks {
-  background-color: lightblue;
+  background-image: linear-gradient(lightblue, skyblue);
   padding: 45px;
   display: flex;
   flex-direction: column;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 .Newlooks h1 {
   color: black;
@@ -296,7 +306,7 @@ html, body {
   font-weight: 900;
   font-size: 80px;
   letter-spacing: -4px;
-  flex-shrink: 0;
+  max-width: 100%;
 }
 .Newlooks p {
   color: black;
@@ -306,11 +316,11 @@ html, body {
   font-weight: 900;
   letter-spacing: 1px;
   font-size: 20px;
-  flex-shrink: 0;
+  max-width: 100%;
 }
 .Fashion1 {
   display: flex;
-  background-color: lightsalmon;
+  background-image: linear-gradient(to bottom, salmon, lightsalmon);
   padding: 1rem;
 }
 .Fashion1 h1 {
@@ -338,6 +348,7 @@ html, body {
   display: flex;
   justify-content: right;
   align-items: center;
+  align-self: center;
 }
 .shopnow1 h1 {
   z-index: 3;
@@ -397,7 +408,10 @@ html, body {
   align-items: center;
   display: flex;
   background-color: black;
-  height: 720px;
+  position: relative;
+}
+.promvideo video {
+  max-width: 100%;
 }
 body ::-webkit-scrollbar {
   width: 5px;
