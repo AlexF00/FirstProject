@@ -234,6 +234,7 @@ html, body {
     align-items: center;
     justify-content: center;
     gap: 1rem;
+    padding-right: 1em;
   }
   .containertop4 i {
     transform: scale(1.3);
@@ -448,13 +449,13 @@ html, body {
   .Fashion1 {
     background-image: none;
     padding: 0rem;
-    position: relative;
     transform: translate(0, -15em);
   }
   .fashionL {
     padding-left: 1em;
     padding-right: 1em;
     box-sizing: border-box;
+    position: fixed;
   }
   .fashionL h1 {
     font-size: 1.8em;
@@ -521,6 +522,13 @@ html, body {
   display: flex;
   padding-top: 2rem;
   padding-bottom: 2rem;
+}
+@media (max-width: 500px) {
+  .Summercollection h1 {
+    font-size: 1.2em;
+    justify-self: center;
+    align-self: center;
+  }
 }
 .grid {
   grid-template-columns: repeat(10, 1fr);
@@ -736,6 +744,17 @@ a {
   background-color: grey;
   transition-duration: 0.3s;
   cursor: pointer;
+}
+@media (max-width: 500px) {
+  .hsport h1 {
+    font-size: 2em;
+  }
+  .hsport p {
+    font-size: 1em;
+  }
+  .summersport {
+    flex-direction: column;
+  }
 }
 .contacts {
   display: flex;
