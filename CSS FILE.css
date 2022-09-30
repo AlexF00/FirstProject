@@ -292,6 +292,28 @@ html, body {
     display: none;
   }
 }
+.promvideo {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  background-color: black;
+  position: relative;
+}
+.firstprom {
+  width: 100%;
+}
+.secondprom{
+  display: none;
+}
+@media (max-width: 500px) {
+  .firstprom {
+    display: none;
+  }
+  .secondprom{
+    display: block;
+    width: 100%;
+  }
+}
 .Newlooks {
   background-image: linear-gradient(lightblue, skyblue);
   display: flex;
@@ -459,16 +481,6 @@ html, body {
   overflow-x: auto;
   overflow-y: hidden;
   padding-bottom: 1rem;
-}
-.promvideo {
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  background-color: black;
-  position: relative;
-}
-.promvideo video {
-  width: 100%;
 }
 body ::-webkit-scrollbar {
   width: 5px;
