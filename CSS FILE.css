@@ -240,7 +240,11 @@ html, body {
     transition: none;
   }
   .containertop4 i:hover {
-    transform: none;
+    transform: scale(1.3);
+    transition: none;
+  }
+  .containertop4 i:focus {
+    transform: scale(1.3);
     transition: none;
   }
   .Menu i {
@@ -445,7 +449,7 @@ html, body {
     background-image: none;
     padding: 0rem;
     position: relative;
-    transform: translate(0, -14em);
+    transform: translate(0, -15em);
   }
   .fashionL {
     padding-left: 1em;
@@ -453,7 +457,7 @@ html, body {
     box-sizing: border-box;
   }
   .fashionL h1 {
-    font-size: 2em;
+    font-size: 1.8em;
     letter-spacing: 0.8px;
     color: white;
     padding-bottom: 0.5rem;
