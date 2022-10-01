@@ -168,13 +168,13 @@ html, body {
   flex-shrink: 0;
 }
 .Account i:hover {
-  transform: translateY(1px) scale(1.2);
+  transform: translateY(1px) scale(1.3);
 }
 .Wishlist i:hover {
-  transform: translateY(1px) scale(1.2);
+  transform: translateY(1px) scale(1.3);
 }
 .Shoppingcart i:hover {
-  transform: translateY(1px) scale(1.2);
+  transform: translateY(1px) scale(1.3);
 }
 .Account button {
   background: transparent;
@@ -305,7 +305,7 @@ html, body {
   position: relative;
 }
 .firstprom {
-  width: 100%;
+  width: 80%;
 }
 .secondprom{
   display: none;
@@ -523,13 +523,6 @@ html, body {
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
-@media (max-width: 500px) {
-  .Summercollection h1 {
-    font-size: 1.2em;
-    justify-self: center;
-    align-self: center;
-  }
-}
 .grid {
   grid-template-columns: repeat(10, 1fr);
   scroll-snap-type: x mandatory;
@@ -631,6 +624,21 @@ a {
 .base1, .base2, .base3, .base4, .base5, .base6, .base7, .base8, .base9, .base10 {
   height: 319px;
 }
+@media (max-width: 500px) {
+  .Summercollection h1 {
+    font-size: 1.2em;
+    justify-self: center;
+    align-self: center;
+    margin-top: 2em;
+    padding: 0;
+  }
+  .grid {
+    scale: 0.8;
+  }
+  .grid h2 {
+    letter-spacing: 0.1em;
+  }
+}
 .SPORTS {
   display: flex;
   flex-direction: column;
@@ -663,20 +671,19 @@ a {
 .summersport {
   display: flex;
   flex-direction: row;
-  gap: 2rem;
   margin-top: 2rem;
   align-items: center;
   justify-content: space-between;
 }
 .sport1 {
   display: flex;
-  width: 100%;
-  height: 100%;
+  width: 90%;
+  height: 90%;
 }
 .sport2 {
   display: flex;
-  width: 100%;
-  height: 100%;
+  width: 90%;
+  height: 90%;
 }
 .shopnow2 {
   display: flex;
@@ -690,6 +697,7 @@ a {
   font-size: 1rem;
   background-color: lightgrey;
   padding: 1em;
+  margin-top: 0.8em;
   color: black;
   font-weight: 600;
   letter-spacing: 2px;
@@ -703,8 +711,10 @@ a {
   font-size:0;
 }
 .shopnow2 p {
+  margin-top: 0.8em;
   display: flex;
   font-size: 2rem;
+  letter-spacing: 0.1em;
   font-family: Courier;
 }
 .shopnow2 h1:hover {
@@ -725,6 +735,7 @@ a {
   background-color: lightgrey;
   color: black;
   padding: 1em;
+  margin-top: 0.8em;
   font-weight: 600;
   letter-spacing: 2px;
   transition: all 0.3s ease-in-out;
@@ -737,7 +748,9 @@ a {
   font-size:0;
 }
 .shopnow3 p {
+  margin-top: 0.8em;
   font-size: 2rem;
+  letter-spacing: 0.1em;
   font-family: Courier;
 }
 .shopnow3 h1:hover {
@@ -747,6 +760,7 @@ a {
 }
 @media (max-width: 500px) {
   .hsport h1 {
+    margin: 0;
     font-size: 2em;
   }
   .hsport p {
@@ -754,6 +768,27 @@ a {
   }
   .summersport {
     flex-direction: column;
+    max-width: 80%;
+    margin-top: 1em;
+  }
+  .shopnow2 p {
+    font-size: 1.5rem;
+  }
+  .shopnow2 h1 {
+    font-size: 0.8rem;
+    box-shadow: 3px 3px black;
+    margin: 0;
+    margin-top: 0.5em;
+    margin-bottom: 1.5em;
+  }
+  .shopnow3 p {
+    font-size: 1.5rem;
+  }
+  .shopnow3 h1 {
+    font-size: 0.8rem;
+    box-shadow: 3px 3px black;
+    margin: 0;
+    margin-top: 0.5em;
   }
 }
 .contacts {
@@ -768,8 +803,7 @@ a {
 }
 .ftgrid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+  grid-template-columns: repeat(6, 1fr);
   width: 85%;
   justify-content: center;
   justify-items: center;
@@ -788,17 +822,26 @@ a {
   color: white;
   cursor: pointer;
 }
-.ftgridcol1 {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0px, 1fr));
-  column-gap: 1rem;
+.ftgridcolumn1 {
+  grid-column: span 2;
 }
-.ftgridcol2 {
+.ftgridcolumn1 ul {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0px, 1fr));
-  column-gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 1em;
 }
-.ftemail input{
+.ftgridcolumn2 {
+  grid-column: span 2;
+}
+.ftgridcolumn2 ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 1em;
+}
+.ftgridcolumn3 {
+  grid-column: span 2;
+}
+.ftgridcolumn3 input{
   overflow: hidden;
   background-color: rgb(24, 24, 24);
   color: white;
@@ -813,21 +856,43 @@ a {
   outline: none;
   border-width: 1px;
 }
-.ftemail input:hover {
+.ftgridcolumn3 input:hover {
   box-shadow: 0 0 5px 0.5px white;
 }
 .ftgrid h1 {
   color: white;
-  display: flex;
   margin: 0;
+  margin-bottom: 0.5em;
   padding: 0;
   border: 0;
   font-size: 20px;
   font-family: courier;
 }
+.ftgridcolumn1 h1, .ftgridcolumn2 h1 {
+  margin-left: 0.25em;
+}
 @media (max-width: 500px) {
+  .contacts {
+    margin-top: 2em;
+  }
   .ftgrid {
     display: grid;
     grid-template-columns: 1fr;
+    margin-top: 2em;
+  }
+  .ftgridcolumn1 {
+    justify-self: left;
+  }
+  .ftgridcolumn2 {
+    justify-self: left;
+    margin-top: 1em;
+  }
+  .ftgridcolumn3 {
+    justify-self: left;
+    margin-top: 2em;
+  }
+  .ftgridcolumn1 h1 {
+    margin-bottom: 0.5em;
+    margin-left: 0.2em;
   }
 }
