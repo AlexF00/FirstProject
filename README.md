@@ -1,2 +1,2 @@
 # FirstProject
-First project, WORK IN PROGRESS! Only on desktop, static site HTML and CSS.
+First project still WORK IN PROGRESS, Now on desktop and mobile! Static site HTML and CSS.
