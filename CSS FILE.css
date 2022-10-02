@@ -205,6 +205,56 @@ html, body {
 .Menu {
   display: none;
 }
+@media (min-width: 501px) and (max-width: 1024px) {
+  .containertop1 {
+    justify-content: left;
+    margin-left: 2em;
+  }
+  .containertop2 {
+    display: none;
+  }
+  .containertop3 {
+    margin: 0;
+  }
+  .Searchbar{
+    justify-content: right;
+  }
+  .Searchbar input {
+    display: none;
+  }
+  .Searchbar button {
+    margin-right: 17px;
+    scale: 1.1;
+  }
+  .Searchbar i:hover {
+    transform: scale(1.2);
+    transition: none;
+  }
+  .Searchbar i:focus {
+    transform: scale(1.2);
+    transition: none;
+  }
+  .containertop4 {
+    justify-content: right;
+    margin-right: 2em;
+    flex-grow: 0;
+  }
+  .containertop4 i:hover {
+    transform: scale(1.3);
+    transition: none;
+  }
+  .containertop4 i:focus {
+    transform: scale(1.3);
+    transition: none;
+  }
+  .Logoicon img:hover {
+    transform: none;
+    transition: none;
+  }
+  .Menu {
+    display: block;
+  }
+}
 @media (max-width: 500px) {
   .topbar {
     min-height: 4rem;
@@ -224,17 +274,11 @@ html, body {
   .containertop3 {
     display: none;
   }
-  .containertop3 input {
-    height: 0px;
-    width: 0px;
-    color: transparent;
-    pointer-events: none;
-  }
   .containertop4 {
     align-items: center;
-    justify-content: center;
+    justify-content: right;
     gap: 1rem;
-    padding-right: 1em;
+    padding-right: 2.5em;
   }
   .containertop4 i {
     transform: scale(1.3);
@@ -320,7 +364,7 @@ html, body {
   }
 }
 .Newlooks {
-  background-image: linear-gradient(lightblue, skyblue);
+  background-image: linear-gradient(skyblue, lightblue, powderblue);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -343,6 +387,14 @@ html, body {
   letter-spacing: 0.1em;
   font-size: 1.2em;
 }
+@media (min-width: 501px) and (max-width: 1024px) {
+  .Newlooks h1 {
+    font-size: 3.2em;
+  }
+  .Newlooks p {
+    font-size: 1em;
+  }
+}
 @media (max-width: 500px) {
   .Newlooks {
     display: none;
@@ -350,7 +402,7 @@ html, body {
 }
 .Fashion1 {
   display: flex;
-  background-image: linear-gradient(to bottom, salmon, lightsalmon);
+  background-image: linear-gradient(to right, salmon, darksalmon, lightsalmon);
   padding: 1rem;
 }
 .fashionL {
@@ -444,6 +496,28 @@ html, body {
   background-color: #404040;
   transition-duration: 0.3s;
   cursor: pointer;
+}
+@media (min-width: 840px) and (max-width: 1024px) {
+  .fashionL h1 {
+    font-size: 3.5em;
+  }
+  .fashionL p {
+    font-size: 2em;
+  }
+  .shopnow1 h1 {
+    font-size: 15px;
+  }
+}
+@media (min-width: 501px) and (max-width: 840px) {
+  .fashionL h1 {
+    font-size: 3em;
+  }
+  .fashionL p {
+    font-size: 1.5em;
+  }
+  .shopnow1 h1 {
+    font-size: 15px;
+  }
 }
 @media (max-width: 500px) {
   .Fashion1 {
@@ -875,6 +949,15 @@ a {
 }
 .ftgridcolumn1 h1, .ftgridcolumn2 h1 {
   margin-left: 0.25em;
+}
+@media (min-width: 501px) and (max-width: 1024px) {
+  .ftgrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .ftgridcolumn3 {
+    margin-top: 3em;
+    grid-column: span 4;
+  }
 }
 @media (max-width: 500px) {
   .contacts {
