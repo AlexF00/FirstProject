@@ -58,3 +58,8 @@ function hide5() {
   document.querySelector('main').style.cssText = 'filter: blur(0px)'
   document.querySelector('footer').style.cssText = 'filter: blur(0px)'
 }
+
+
+function click1() {
+  window.location.reload();
+}

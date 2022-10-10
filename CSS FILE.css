@@ -231,7 +231,7 @@ main {
   margin-top: 3.5rem;
   transform: scaleY(0);
   visibility: hidden;
-  transition: transform 0.2s ease 0.3s, opacity 0.2s ease-in-out 0.1s, visibility 0.2s ease-in-out 0.1s;
+  transition: transform 0.2s, opacity 0.2s, visibility 0.2s;
   transform-origin: top center;
   opacity: 0;
   cursor: default;
