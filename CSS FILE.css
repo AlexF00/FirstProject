@@ -24,6 +24,10 @@ html, body {
   height: 100vh;
   height: calc(var(--vh, 1vh) * 100);
 }
+main {
+  transition: all 0.5s ease;
+  background-color: #fff;
+}
 .Freeshipping p {
    color: black;
    font-family: Courier;
@@ -62,14 +66,23 @@ html, body {
   z-index: 100;
   top: -1px;
 }
-.containertop2 li {
+.maincategory {
   display: flex;
-  padding: 17px;
+  padding: 1em;
+  padding-bottom: 2em;
+  padding-top: 2em;
   color: white;
   font-family: Courier;
   font-size: 18px;
   letter-spacing: 3px;
   font-weight: bold;
+  text-decoration: underline 0.10em rgb(255, 255, 255, 0);
+  transition: text-decoration-color 250ms;
+  text-underline-offset: 0.5em;
+  cursor: pointer;
+}
+.maincategory:hover {
+  text-decoration-color: white;
 }
 .containertop2 ul {
   display: flex;
@@ -99,7 +112,9 @@ html, body {
 }
 .containertop2 {
   display: flex;
-  margin: 1rem;
+  margin: 0;
+  margin-left: 1em;
+  margin-right: 1em;
   padding: 0;
   border: 0;
   align-items: center;
@@ -204,6 +219,60 @@ html, body {
 }
 .Menu {
   display: none;
+}
+.dropdownwindow1, .dropdownwindow2, .dropdownwindow3, .dropdownwindow4, .dropdownwindow5 {
+  white-space: nowrap;
+  position: absolute;
+  max-height: 800px;
+  width: 100%;
+  overflow: hidden;
+  background: white;
+  right: 0;
+  margin-top: 3.5rem;
+  transform: scaleY(0);
+  visibility: hidden;
+  transition: transform 0.2s ease 0.3s, opacity 0.2s ease-in-out 0.1s, visibility 0.2s ease-in-out 0.1s;
+  transform-origin: top center;
+  opacity: 0;
+  cursor: default;
+}
+.dropgrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 50%;
+  padding-bottom: 2em;
+  padding-top: 1em;
+  margin-left: auto;
+  margin-right: auto;
+}
+.dropgrid h1, .dropgrid li {
+  color: black;
+  list-style: none;
+  cursor: pointer;
+}
+.dropgrid h1{
+  margin-top: 1.5em;
+  margin-bottom: 1em;
+  font-family: courier;
+  font-size: 16px;
+}
+.dropgrid li {
+  padding-bottom: 1em;
+  font-family: courier;
+  font-size: 14px;
+  opacity: 60%;
+}
+.dropgrid li:hover {
+  opacity: 100%;
+}
+.arrivalsgrid1, .arrivalsgrid2, .arrivalsgrid3, .arrivalsgrid4 {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: top;
+}
+.arrivalsgrid1 ul, .arrivalsgrid2 ul, .arrivalsgrid3 ul, .arrivalsgrid4 ul {
+  flex-direction: column;
 }
 @media (min-width: 501px) and (max-width: 1024px) {
   .containertop1 {
@@ -764,6 +833,7 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-bottom: 4rem;
 }
 .shopnow2 h1 {
   z-index: 3;
@@ -801,6 +871,7 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-bottom: 4rem;
 }
 .shopnow3 h1 {
   z-index: 3;
@@ -873,7 +944,6 @@ a {
 .contacts {
   display: flex;
   background-color: rgb(24, 24, 24);
-  margin-top: 4rem;
   border: 0;
   padding: 0;
   justify-content: center;
