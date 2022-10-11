@@ -23,6 +23,11 @@ html, body {
   overflow-x: hidden;
   height: 100vh;
   height: calc(var(--vh, 1vh) * 100);
+  user-select: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 main {
   transition: all 0.5s ease;
@@ -516,6 +521,7 @@ main {
   letter-spacing: 2px;
   transition: all 0.3s ease-in-out;
   box-shadow: 5px 5px white;
+  overflow: visible;
 }
 .shopnow1 button {
   background: transparent;
@@ -523,6 +529,7 @@ main {
   margin: none;
   padding-top: 0.5rem;
   font-size:0;
+  overflow: visible;
 }
 .shopnow1 h1:hover {
   background-color: #404040;
@@ -553,6 +560,7 @@ main {
   letter-spacing: 2px;
   transition: all 0.3s ease-in-out;
   box-shadow: 5px 5px white;
+  overflow: visible;
 }
 .learnmore button {
   background: transparent;
@@ -560,6 +568,7 @@ main {
   margin: none;
   padding-top: 0.5rem;
   font-size:0;
+  overflow: visible;
 }
 .learnmore h1:hover {
   background-color: #404040;
@@ -847,12 +856,14 @@ a {
   letter-spacing: 2px;
   transition: all 0.3s ease-in-out;
   box-shadow: 5px 5px black;
+  overflow: visible;
 }
 .shopnow2 button {
   background: transparent;
   border: none;
   margin: none;
   font-size:0;
+  overflow: visible;
 }
 .shopnow2 p {
   margin-top: 0.8em;
@@ -885,12 +896,14 @@ a {
   letter-spacing: 2px;
   transition: all 0.3s ease-in-out;
   box-shadow: 5px 5px black;
+  overflow: visible;
 }
 .shopnow3 button {
   background: transparent;
   border: none;
   margin: none;
   font-size:0;
+  overflow: visible;
 }
 .shopnow3 p {
   margin-top: 0.8em;
@@ -913,7 +926,7 @@ a {
   }
   .summersport {
     flex-direction: column;
-    max-width: 80%;
+    max-width: 90%;
     margin-top: 1em;
   }
   .sport1 {
@@ -950,6 +963,11 @@ a {
   align-items: center;
   flex-wrap: wrap;
   transition: all 0.5s ease;
+  user-select: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 .ftgrid {
   display: grid;
