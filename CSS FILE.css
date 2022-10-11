@@ -589,12 +589,14 @@ main {
   }
   .shopnow1 button {
     z-index: 3;
+    min-width: 130px;
   }
   .learnmore h1 {
     z-index: 4;
   }
   .learnmore button {
     z-index: 3;
+    min-width: 130px;
   }
 }
 @media (min-width: 501px) and (max-width: 840px) {
@@ -610,12 +612,14 @@ main {
   }
   .shopnow1 button {
     z-index: 3;
+    min-width: 130px;
   }
   .learnmore h1 {
     z-index: 4;
   }
   .learnmore button {
     z-index: 3;
+    min-width: 130px;
   }
 }
 @media (max-width: 500px) {
@@ -649,6 +653,7 @@ main {
     padding: 0;
     padding-bottom: 0.5rem;
     z-index: 3;
+    min-width: 130px;
   }
   .shopnow1 h1 {
     font-size: 1rem;
@@ -674,6 +679,7 @@ main {
   }
   .learnmore button {
     z-index: 3;
+    min-width: 150px;
   }
   .fashionR img {
     width: 100%;
