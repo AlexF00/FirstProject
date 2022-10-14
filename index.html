@@ -285,22 +285,54 @@
         </div>
         <div class="containertop4">
             <div class="Shoppingcart">
-                <button type="submit">
+                <button type="submit" onclick="click2()">
+                    <div class="shoppingwindow">
+
+                    </div>
                     <i class="gg-shopping-cart"></i>
                 </button>
             </div>
             <div class="Wishlist">
-                <button type="submit">
+                <button type="submit" onclick="click3()">
+                    <div class="wishlistwindow">
+
+                    </div>
                     <i class="gg-crown"></i>
                 </button>
             </div>
             <div class="Account">
-                <button type="submit">
+                <button class="accountbutton" type="submit">
                     <i class="gg-profile"></i>
+                    <div class="accountwindow">
+                        <div class="triangle"></div>
+                        <div class="accountwindowcontent">
+                            <ul class="accountas">
+                                <li>
+                                    <a>My Account</a>
+                                </li>
+                                <li>
+                                    <a>Returns</a>
+                                </li>
+                                <li>
+                                    <a>Support</a>
+                                </li>
+                                <li>
+                                    <a>Language</a>
+                                </li>
+                            </ul>
+                            <div class="accountbuttons">
+                                <a class="login">LOGIN</a>
+                                <a class="register">REGISTER</a>
+                            </div>
+                        </div>
+                    </div>
                 </button>
             </div>
             <div class="Menu">
-                <button type="submit">
+                <button type="submit" onclick="click5()">
+                    <div class="menuwindow">
+                        
+                    </div>
                     <i class="gg-menu-right-alt"></i>
                 </button>
             </div>
@@ -348,13 +380,18 @@
             <div class="Summercollection">
                 <h1>EXPLORE THE COLLECTION</h1>
                 <div class="grid">
-                    <a href="Bikini n.1.html">
-                        <div class="base1">
-                            <img class=summer1 src="https://img01.ztat.net/article/spp-media-p1/610c0a7f7797429891136b30b93cceed/7eecf3652821430a99a36ed71dc6e42a.jpg?imwidth=1800&filter=packshot&imformat=jpg-progressive" width="200px" height="287px">
-                            <h2>BIKINI SET N.1</h2>
-                            <h3>$40.00</h3>
-                        </div>
-                    </a>
+                    <div class="bikinicontainer">
+                        <a href="Bikini n.1.html">
+                            <div class="base1">
+                                <img class=summer1 src="https://img01.ztat.net/article/spp-media-p1/610c0a7f7797429891136b30b93cceed/7eecf3652821430a99a36ed71dc6e42a.jpg?imwidth=1800&filter=packshot&imformat=jpg-progressive" width="200px" height="287px">
+                                <h2>BIKINI SET N.1</h2>
+                                <h3>$40.00</h3>
+                            </div>
+                        </a>
+                        <button class="wishlistbutton1" type="submit">
+                            <i class="gg-crown"></i>
+                        </button>
+                    </div>
                     <a href="Bikini n.1.html">
                         <div class="base2">
                             <img src="https://img01.ztat.net/article/spp-media-p1/bc1f1987be4948698cb7c982ae7677e2/95e9936038894d729aa349413ac88f2e.jpg?imwidth=1800&filter=packshot&imformat=jpg-progressive" width="200px" height="287px">

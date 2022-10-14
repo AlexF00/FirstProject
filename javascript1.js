@@ -63,3 +63,27 @@ function hide5() {
 function click1() {
   window.location.reload();
 }
+document.addEventListener('click', function(e){
+  if (document.querySelector('.Account').contains(e.target)){
+    document.querySelector('.accountwindow').style.cssText = 'transform: scaleY(1); opacity:100%; visibility:visible';
+  } else {
+    document.querySelector('.accountwindow').style.cssText = 'transform: scaleY(0); opacity:0; visibility:hidden';
+  }
+});
+
+function addItemWishlist() {
+  console.log('Adding item to the wishlist')
+}
+function removeItemWishlist() {
+  console.log('Removing item from the wishlist')
+}
+let wishListButton = document.querySelector('.wishlistbutton1')
+wishListButton.addEventListener('click', function(){
+  if(this.classList.contains('active')) {
+    removeItemWishlist();
+    this.classList.remove('active')
+  } else {
+    addItemWishlist();
+    this.classList.add('active')
+  }
+})
