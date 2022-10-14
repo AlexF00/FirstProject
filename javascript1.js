@@ -1,4 +1,3 @@
-const category = document.querySelectorAll('.containertop2 li')
 
 function show1() {
   document.querySelector('.dropdownwindow1').style.cssText = 'transform: scaleY(1); opacity:100%; visibility:visible';
@@ -77,8 +76,9 @@ function addItemWishlist() {
 function removeItemWishlist() {
   console.log('Removing item from the wishlist')
 }
-let wishListButton = document.querySelector('.wishlistbutton1')
-wishListButton.addEventListener('click', function(){
+let wishListButton = document.getElementsByClassName('wishlistbutton')
+for (i = 0; i < wishListButton.length; i++) {
+  wishListButton[i].addEventListener('click', function(){
   if(this.classList.contains('active')) {
     removeItemWishlist();
     this.classList.remove('active')
@@ -86,4 +86,27 @@ wishListButton.addEventListener('click', function(){
     addItemWishlist();
     this.classList.add('active')
   }
-})
+})}
+let notificationPhrase = document.getElementsByClassName('notificationp')
+let z = 103
+let x = 103
+for (k = 0; k < wishListButton.length; k++) {
+  wishListButton[k].addEventListener('click', function(){
+    if(this.classList.contains('active')) {
+      document.querySelector('.notificationcontainer1').style.cssText = 'transform: scaleY(1);'
+      document.querySelector('.notificationcontainer1').style.zIndex = z
+      z++;
+      document.querySelector('.notificationcontainer2').style.cssText = 'transform: scaleY(0);'
+      setTimeout(function(){
+        document.querySelector('.notificationcontainer1').style.cssText = 'transform: scaleY(0)';
+      }, 3000);
+    } else {
+      document.querySelector('.notificationcontainer2').style.cssText = 'transform: scaleY(1);'
+      document.querySelector('.notificationcontainer2').style.zIndex = x
+      x++
+      document.querySelector('.notificationcontainer1').style.cssText = 'transform: scaleY(0);'
+      setTimeout(function(){
+        document.querySelector('.notificationcontainer2').style.cssText = 'transform: scaleY(0)';
+      }, 3000);
+    }
+})}

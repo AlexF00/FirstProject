@@ -466,6 +466,52 @@ main {
     transition: none;
   }
 }
+.notificationcontainer1 {
+  display: flex;
+  box-shadow: 0px 0px 3px 0.3px grey;
+  left: 80%;
+  bottom: 91.5%;
+  position: fixed;
+  z-index: 102;
+  background-color: #A4C639;
+  height: 7%;
+  width: 18%;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1em;
+  transition: all 0.2s;
+  transform: scaleY(0);
+  transform-origin: center;
+}
+.notificationcontainer2 {
+  display: flex;
+  box-shadow: 0px 0px 3px 0.3px grey;
+  left: 80%;
+  bottom: 91.5%;
+  position: fixed;
+  z-index: 102;
+  background-color: #EA4335;
+  height: 7%;
+  width: 18%;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1em;
+  transition: all 0.2s;
+  transform: scaleY(0);
+  transform-origin: center;
+}
+.notificationp1 {
+  padding: 1em;
+  font-family: courier;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+}
+.notificationp2 {
+  padding: 1em;
+  font-family: courier;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+}
 .Thethird {
   display: flex;
   flex-direction: column;
@@ -502,7 +548,53 @@ main {
   font-weight: 600;
   flex-shrink: 0;
 }
+@media (min-width: 501px) and (max-width: 1024px) {
+  .notificationcontainer1 {
+    left: 68%;
+    bottom: 91.5%;
+    height: 7%;
+    width: 30%;
+    align-items: center;
+    justify-content: center;
+  }
+  .notificationcontainer2 {
+    left: 68%;
+    bottom: 91.5%;
+    height: 7%;
+    width: 30%;
+    align-items: center;
+    justify-content: center;
+  }
+}
 @media (max-width: 500px) {
+  .notificationcontainer1 {
+    left: 2%;
+    bottom: 91.7%;
+    height: 7%;
+    width: 95%;
+    align-items: center;
+    justify-content: center;
+  }
+  .notificationcontainer2 {
+    left: 2%;
+    bottom: 91.7%;
+    height: 7%;
+    width: 95%;
+    align-items: center;
+    justify-content: center;
+  }
+  .notificationp1 {
+    padding: 1em;
+    font-family: courier;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+  }
+  .notificationp2 {
+    padding: 1em;
+    font-family: courier;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+  }
   .Thethird {
     display: none;
   }
@@ -827,22 +919,28 @@ body ::-webkit-scrollbar-track {
   background: rgb(238, 238, 238);
   border-radius: 1rem;
 }
-.wishlistbutton1 {
+.wishlistbutton{
   background: transparent;
   position: absolute;
-  bottom: 2.5em;
-  left: 12.5em;
+  display: flex;
+  bottom: 2.4em;
+  left: 11.7em;
+  height: 3em;
+  width: 3.3em;
   border: none;
   margin: none;
   z-index: 100;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
-.bikinicontainer {
+.bikinicontainer{
   position: relative;
 }
-.bikinicontainer i {
+.bikinicontainer i{
   color: black;
-  height: 15px;
-  width: 25px;
+  height: 13px;
+  width: 20px;
 }
 /*.container {
   position: relative;
