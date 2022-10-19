@@ -1,4 +1,4 @@
-
+'use strict';
 function show1() {
   document.querySelector('.dropdownwindow1').style.cssText = 'transform: scaleY(1); opacity:100%; visibility:visible';
   document.querySelector('main').style.cssText = 'filter: blur(5px) brightness(0.8);'
@@ -69,28 +69,22 @@ document.addEventListener('click', function(e){
     document.querySelector('.accountwindow').style.cssText = 'transform: scaleY(0); opacity:0; visibility:hidden';
   }
 });
-
-function addItemWishlist() {
-  console.log('Adding item to the wishlist')
-}
-function removeItemWishlist() {
-  console.log('Removing item from the wishlist')
-}
+const wishListStore = []
 let wishListButton = document.getElementsByClassName('wishlistbutton')
-for (i = 0; i < wishListButton.length; i++) {
+for (let i = 0; i < wishListButton.length; i++) {
   wishListButton[i].addEventListener('click', function(){
   if(this.classList.contains('active')) {
-    removeItemWishlist();
     this.classList.remove('active')
+    wishListStore.splice(wishListStore.indexOf(this.id), 1)
   } else {
-    addItemWishlist();
     this.classList.add('active')
+    wishListStore.push(this.id)
   }
 })}
 let notificationPhrase = document.getElementsByClassName('notificationp')
 let z = 103
 let x = 103
-for (k = 0; k < wishListButton.length; k++) {
+for (let k = 0; k < wishListButton.length; k++) {
   wishListButton[k].addEventListener('click', function(){
     if(this.classList.contains('active')) {
       document.querySelector('.notificationcontainer1').style.cssText = 'transform: scaleY(1);'
@@ -103,10 +97,16 @@ for (k = 0; k < wishListButton.length; k++) {
     } else {
       document.querySelector('.notificationcontainer2').style.cssText = 'transform: scaleY(1);'
       document.querySelector('.notificationcontainer2').style.zIndex = x
-      x++
+      x++;
       document.querySelector('.notificationcontainer1').style.cssText = 'transform: scaleY(0);'
       setTimeout(function(){
         document.querySelector('.notificationcontainer2').style.cssText = 'transform: scaleY(0)';
       }, 3000);
     }
 })}
+for (let y = 0; y < wishListButton.length; y++) {
+  wishListButton[y].addEventListener('click', function(){
+    sessionStorage.setItem('Store', wishListStore)
+  })
+}
+console.log(window.sessionStorage)

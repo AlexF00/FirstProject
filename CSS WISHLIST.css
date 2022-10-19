@@ -1,0 +1,40 @@
+.myWishlist {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5em;
+    padding-bottom: 1em;
+  }
+  .myWishlist h1 {
+    color: black;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    margin: 0;
+    font-weight: 900;
+    font-size: 4em;
+    position: relative;
+    right: 5.7em;
+    padding-bottom: 0.3em;
+  }
+  .myWishlist p {
+    color: black;
+    font-family: Courier;
+    padding-top: 5em;
+    padding-bottom: 5em;
+    margin: 0;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    font-size: 1.275em;
+    position: relative;
+    right: 15.8em;
+  }
+  .bikinigrid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2em;
+    margin-top: 2em;
+    margin-bottom: 2.5em;
+  }
+  #bikini01, #bikini02, #bikini03, #bikini04, #bikini05, #bikini06, #bikini07, #bikini08, #bikini09, #bikini10 {
+    display: none;
+  }
