@@ -59,9 +59,6 @@ function hide5() {
 }
 
 
-function click1() {
-  window.location.reload();
-}
 document.addEventListener('click', function(e){
   if (document.querySelector('.Account').contains(e.target)){
     document.querySelector('.accountwindow').style.cssText = 'transform: scaleY(1); opacity:100%; visibility:visible';
@@ -81,7 +78,6 @@ for (let i = 0; i < wishListButton.length; i++) {
     wishListStore.push(this.id)
   }
 })}
-let notificationPhrase = document.getElementsByClassName('notificationp')
 let z = 103
 let x = 103
 for (let k = 0; k < wishListButton.length; k++) {
