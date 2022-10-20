@@ -39,3 +39,8 @@
   #bikini01, #bikini02, #bikini03, #bikini04, #bikini05, #bikini06, #bikini07, #bikini08, #bikini09, #bikini10 {
     display: none;
   }
+  .wishlistbutton .gg-crown {
+    color: black;
+    background-color: gold;
+    clip-path: polygon(24% 5px, 50.00% 0.6px, 77% 40.69%, 100% -3.23%, 101% 100%, 48% 107.69%, 0px 96.77%, 0px 2.23%)
+  }

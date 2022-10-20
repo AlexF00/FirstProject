@@ -52,4 +52,3 @@ for (let w = 0; w < wishListButton.length; w++) {
         }
     }
 )}
-console.log(sessionDelete[0])

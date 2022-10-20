@@ -90,6 +90,7 @@ for (let k = 0; k < wishListButton.length; k++) {
       setTimeout(function(){
         document.querySelector('.notificationcontainer1').style.cssText = 'transform: scaleY(0)';
       }, 3000);
+      document.getElementsByClassName('gg-crown')[k + 1].style.cssText = 'background-color: gold;'
     } else {
       document.querySelector('.notificationcontainer2').style.cssText = 'transform: scaleY(1);'
       document.querySelector('.notificationcontainer2').style.zIndex = x
@@ -98,6 +99,7 @@ for (let k = 0; k < wishListButton.length; k++) {
       setTimeout(function(){
         document.querySelector('.notificationcontainer2').style.cssText = 'transform: scaleY(0)';
       }, 3000);
+      document.getElementsByClassName('gg-crown')[k + 1].style.cssText = 'background-color: transparent;'
     }
 })}
 for (let y = 0; y < wishListButton.length; y++) {
@@ -105,4 +107,3 @@ for (let y = 0; y < wishListButton.length; y++) {
     sessionStorage.setItem('Store', wishListStore)
   })
 }
-console.log(window.sessionStorage)
