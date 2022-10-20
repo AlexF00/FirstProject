@@ -1,9 +1,14 @@
 'use strict'
-if (window.sessionStorage.getItem('Store') === '' || window.sessionStorage.length === 0) {
+if (window.sessionStorage.getItem('Store') === "" || window.sessionStorage.length == 0) {
     document.querySelector('.myWishlist p').style.cssText = 'display: block';
 }
+
 let sessionDelete = []
 sessionDelete = sessionStorage.getItem('Store').split(',')
+
+if (sessionDelete[0] === "") {
+    document.querySelector('.myWishlist p').style.cssText = 'display: block';
+}
 
 if (window.sessionStorage.getItem('Store').indexOf('bikini01') > -1) {
     document.getElementById('bikini01').style.cssText = 'display: flex';
@@ -40,11 +45,11 @@ if (window.sessionStorage.getItem('Store').indexOf('bikini01') > -1) {
 let bikiniContainer = document.getElementsByClassName('bikinicontainer')
 for (let w = 0; w < wishListButton.length; w++) {
     wishListButton[w].addEventListener('click', function(){
-        sessionDelete.splice(wishListStore.indexOf(wishListButton[w]), 1)
+        sessionDelete.splice(sessionDelete[w], 1)
         bikiniContainer[w].style.cssText = 'display: none';
         if (sessionDelete.length === 0) {
             document.querySelector('.myWishlist p').style.cssText = 'display: block';
         }
     }
 )}
-console.log(sessionDelete)
+console.log(sessionDelete[0])
