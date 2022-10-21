@@ -1269,11 +1269,50 @@ a {
   height: 3em;
   width: 23em;
   transition: box-shadow 0.5s;
-  outline: none;
   border-width: 1px;
+  margin-bottom: 1em;
 }
 .ftgridcolumn3 input:hover {
   box-shadow: 0 0 5px 0.5px white;
+}
+.ftgridcolumn3 textarea{
+  overflow: hidden;
+  background-color: rgb(24, 24, 24);
+  color: white;
+  border-color: darkgray;
+  z-index: 1;
+  text-indent: 10px;
+  text-overflow: clip;
+  outline: none;
+  height: 8em;
+  width: 23em;
+  transition: box-shadow 0.5s;
+  border-width: 1px;
+  resize: none;
+  margin-bottom: 1em;
+}
+.ftgridcolumn3 textarea:hover {
+  box-shadow: 0 0 5px 0.5px white;
+}
+.ftgridcolumn3 form {
+  display: flex;
+  flex-direction: column;
+}
+.ftgridcolumn3 button {
+  height: 3em;
+  width: 6em;
+  background: transparent;
+  background-image: linear-gradient(45deg, purple, #BA55D3, violet, #BA55D3, purple);
+  background-size: 800%;
+  animation: bg-animation 20s infinite alternate;
+}
+@keyframes bg-animation {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
 }
 .ftgrid h1 {
   color: white;
