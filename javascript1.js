@@ -107,3 +107,52 @@ for (let y = 0; y < wishListButton.length; y++) {
     sessionStorage.setItem('Store', wishListStore)
   })
 }
+let bar = document.getElementsByClassName('bikinibar')
+function searchItems() {
+  bar[0].style.display = 'block'
+  let input = document.getElementById('searchbar').value
+  input = input.toLowerCase();
+  let bikiniItems = document.getElementsByClassName('bikinisets')
+  let bikiniA = document.getElementsByClassName('bikinia')
+  for (let j = 0; j < bikiniItems.length; j++) {
+    if (bikiniItems[j].innerHTML.toLowerCase().includes(input)) {
+      bikiniItems[j].style.display = 'flex'
+      bikiniA[j].style.display = 'flex'
+    } else {
+      bikiniItems[j].style.display = 'none'
+      bikiniA[j].style.display = 'none'
+    }
+  }
+    if (input === "") {
+      bar[0].style.display = 'none'
+    } else {
+      bar[0].style.display = 'grid'
+    }
+}
+document.getElementById('searchbar').addEventListener('click', function() {
+  let input = document.getElementById('searchbar').value
+  if (input !== '') {
+    bar[0].style.display = 'grid'
+  }
+})
+
+document.addEventListener('click', function(f) {
+  if (document.getElementById('searchbar').contains(f.target) || bar[0].contains(f.target)){
+    
+  } else {
+    bar[0].style.display = 'none'
+  }
+});
+function show() {
+  document.querySelector('.container').style.display = 'flex'
+}
+function hide() {
+  document.querySelector('.container').style.display = 'none'
+}
+document.querySelector('.box1').addEventListener('click', function() {
+  document.querySelector('.grid').scrollBy({top:0, left:-500, behavior:"smooth"})
+})
+document.querySelector('.box2').addEventListener('click', function() {
+  document.querySelector('.grid').scrollBy({top:0, left:500, behavior:"smooth"})
+})
+

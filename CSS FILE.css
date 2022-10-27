@@ -23,11 +23,6 @@ html, body {
   overflow-x: hidden;
   height: 100vh;
   height: calc(var(--vh, 1vh) * 100);
-  user-select: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
 }
 main {
   transition: all 0.5s ease;
@@ -37,7 +32,6 @@ main {
   color: black;
   font-family: Courier;
   margin: 0;
-  cursor: pointer;
   font-size: 18px;
   font-weight: 600;
   text-decoration: underline 0.10em rgba(255, 255, 255, 0);
@@ -84,7 +78,11 @@ main {
   text-decoration: underline 0.10em rgb(255, 255, 255, 0);
   transition: text-decoration-color 250ms;
   text-underline-offset: 0.5em;
-  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 .maincategory:hover {
   text-decoration-color: white;
@@ -131,10 +129,12 @@ main {
 }
 .containertop3 {
   display: flex;
+  position: relative;
   margin: 1rem;
   padding: 0;
   border: 0;
   align-items: center;
+  justify-content: center;
   flex-grow: 0;
   flex-shrink: 0;
   flex-wrap: wrap;
@@ -148,12 +148,19 @@ main {
   align-items: center;
   flex-grow: 1;
   flex-shrink: 0;
+  user-select: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 .Searchbar {
   display: flex;
   height: 40px;
   width: 250px;
   margin: 0;
+  justify-content: center;
+  align-items: center;
 }
 .Searchbar input {
   overflow: hidden;
@@ -264,7 +271,6 @@ main {
 .dropgrid h1, .dropgrid li {
   color: black;
   list-style: none;
-  cursor: pointer;
 }
 .dropgrid h1{
   margin-top: 1.5em;
@@ -302,7 +308,7 @@ main {
   flex-direction: column;
   transform: scaleY(0);
   visibility: hidden;
-  transition: transform 0.2s, opacity 0.2s, visibility 0.2s;
+  transition: transform 150ms, opacity 150ms, visibility 150ms;
   transform-origin: top center;
   opacity: 0;
 }
@@ -370,6 +376,46 @@ main {
   letter-spacing: 2px;
   transition: all 0.3s ease-in-out;
   width: 100%;
+}
+.bikinibar {
+  background-color: white;
+  position: absolute;
+  top: 3em;
+  left: 2em;
+  border-radius: 0.3em;
+  display: none;
+  min-width: max-content;
+}
+.bikinibar ol {
+  display: grid;
+  grid-template-areas:
+  "a a"
+  "b b"
+  "c c"
+  "d d";
+}
+.bikinisets {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  font-weight: 900;
+  gap: 1em;
+  min-width: auto;
+}
+.bikinisets p {
+  color: black;
+}
+.bikinibar a {
+  display: flex;
+  align-items: center;
+  box-shadow: 0px 0px 0.5px 0.5px grey;
+  border-radius: 0.3em;
+  padding: 0.6em;
+  gap: 1em;
+}
+.bikinibar a:hover {
+  box-shadow: 0px 0px 3px 0.5px black;
 }
 @media (min-width: 501px) and (max-width: 1279px) {
   .containertop1 {
@@ -882,10 +928,14 @@ main {
   align-items: center;
   justify-content: center;
 }
+.boxsection {
+  width: 100%;
+  position: relative;
+}
 .Summercollection {
   display: flex;
   flex-direction: column;
-  width: 80%;
+  width: 70%;
 }
 .Summercollection h1 {
   font-family: Courier;
@@ -897,13 +947,15 @@ main {
   padding-bottom: 2rem;
 }
 .grid {
-  grid-template-columns: repeat(10, 1fr);
+  grid-template-columns: repeat(7, 1fr);
   scroll-snap-type: x mandatory;
   gap: 1rem;
   display: grid;
   overflow-x: auto;
   overflow-y: hidden;
-  padding-bottom: 1rem;
+  width: 100%;
+  min-height: 23em;
+  transition: scroll 0.5s ease-in-out;
 }
 body ::-webkit-scrollbar {
   width: 5px;
@@ -923,8 +975,8 @@ body ::-webkit-scrollbar-track {
   background: transparent;
   position: absolute;
   display: flex;
-  bottom: 2.4em;
-  left: 11.7em;
+  bottom: 2.9em;
+  left: 15em;
   height: 3em;
   width: 3.3em;
   border: none;
@@ -946,77 +998,60 @@ body ::-webkit-scrollbar-track {
   height: 13px;
   width: 20px;
 }
-/*.container {
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 324px;
+  display: none;
+}
+.box1, .box2 {
   position: relative;
-  display: grid;
-  height: 287px;
-  width: 80%;
+  z-index: 30;
+  opacity: 50%;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
 }
-.container .box1 {
-  position: absolute;
-  height: 287px;
-  width: 40px;
-  margin: 0;
-  border: 0;
-  padding: 0;
-  justify-self: left;
-  opacity: 1%;
-  background-color: rgb(229, 231, 235);
-  transition: all 0.2s ease-in-out;
-  font-size: 25px;
-  z-index: 51;
+.box1 p{
+  padding: 0 1.2px 1.4px 0px;
 }
-.container .box2 {
-  position: absolute;
-  height: 287px;
-  width: 40px;
-  margin: 0;
-  border: 0;
-  padding: 0;
-  justify-self: right;
-  opacity: 1%;
-  background-color: rgb(229, 231, 235);
-  transition: all 0.2s ease-in-out;
-  font-size: 25px;
-  z-index: 51;
+.box2 p {
+  padding: 0 0 1.2px 1px;
 }
-.container:hover .box1{
-  opacity: 70%;
+.bikinihs {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
-.container:hover .box2{
-  opacity: 70%;
-}*/
 .grid a {
   z-index: 50;
 }
-.base1 img:hover + h2, .base2 img:hover + h2, .base3 img:hover + h2, .base4 img:hover + h2, .base5 img:hover + h2, .base6 img:hover + h2, .base7 img:hover + h2, .base8 img:hover + h2, .base9 img:hover + h2, .base10 img:hover + h2 {
-  transform:translateY(-3px)
+.base1, .base2, .base3, .base4, .base5, .base6, .base7, .base8, .base9, .base10 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 319px;
+  gap: 0.5em;
 }
-.base1 img:hover + h2 + h3, .base2 img:hover + h2 + h3, .base3 img:hover + h2 + h3, .base4 img:hover + h2 + h3, .base5 img:hover + h2 + h3, .base6 img:hover + h2 + h3, .base7 img:hover + h2 + h3, .base8 img:hover + h2 + h3, .base9 img:hover + h2 + h3, .base10 img:hover + h2 + h3 {
-  transform:translateY(-3px)
-}
-h2 {
+.bikinihs h2 {
   font-family: "Trebuchet MS", Helvetica, sans-serif;
   color: black;
   font-weight: 900;
-  padding-top: 8px;
   transition: all 150ms ease-in-out;
 }
-h3 {
+.bikinihs h3 {
   font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   color: black;
-  position: relative;
-  bottom: 21px;
-  left: 153.5px;
-  margin-right: 100%;
-  margin-bottom: -10%;
   transition: all 150ms ease-in-out;
 }
 a {
   text-decoration: none;
-}
-.base1, .base2, .base3, .base4, .base5, .base6, .base7, .base8, .base9, .base10 {
-  height: 319px;
 }
 @media (max-width: 500px) {
   .Summercollection h1 {
@@ -1035,9 +1070,10 @@ a {
 }
 .SPORTS {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
+  margin-top: 2em;
 }
 .hsport {
   display: flex;
@@ -1061,13 +1097,6 @@ a {
   margin: 0;
   position: relative;
   font-size: 25px;
-}
-.summersport {
-  display: flex;
-  flex-direction: row;
-  margin-top: 2rem;
-  align-items: center;
-  justify-content: space-between;
 }
 .sport1 {
   display: flex;
@@ -1166,21 +1195,22 @@ a {
   .hsport p {
     font-size: 1em;
   }
-  .summersport {
+  .SPORTS {
     flex-direction: column;
-    max-width: 90%;
     margin-top: 1em;
   }
   .sport1 {
-    transform: none;
-    translate: none;
-    transform-box: none;
+    scale: 0.9;
+  }
+  .sport2 {
+    scale: 0.9;
   }
   .shopnow2 {
     padding: 0;
   }
   .shopnow2 p {
     font-size: 1.5rem;
+    margin: 0;
   }
   .shopnow2 h1 {
     font-size: 0.8rem;
@@ -1194,6 +1224,7 @@ a {
   }
   .shopnow3 p {
     font-size: 1.5rem;
+    margin: 0;
   }
   .shopnow3 h1 {
     font-size: 0.8rem;
@@ -1226,13 +1257,11 @@ a {
   margin-top: 3rem;
   margin-bottom: 2rem;
 }
-.ftgrid ul {
-  color: darkgrey;
-  list-style: none;
-}
 .ftgrid li {
   padding: 5px;
   font-family: courier;
+  color: darkgrey;
+  list-style: none;
 }
 .ftgrid li:hover {
   color: white;
@@ -1268,7 +1297,7 @@ a {
   outline: none;
   height: 3em;
   width: 23em;
-  transition: box-shadow 0.5s;
+  transition: box-shadow 0.3s;
   border-width: 1px;
   margin-bottom: 1em;
 }
@@ -1286,7 +1315,7 @@ a {
   outline: none;
   height: 8em;
   width: 23em;
-  transition: box-shadow 0.5s;
+  transition: box-shadow 0.3s;
   border-width: 1px;
   resize: none;
   margin-bottom: 1em;
@@ -1301,10 +1330,19 @@ a {
 .ftgridcolumn3 button {
   height: 3em;
   width: 6em;
+  font-family: courier;
+  font-size: 16px;
+  font-weight: 900;
   background: transparent;
-  background-image: linear-gradient(45deg, purple, #BA55D3, violet, #BA55D3, purple);
-  background-size: 800%;
+  background-image: linear-gradient(45deg, #ec7095 30%, rgb(251, 138, 52) 60%, #FCE043 100%);
+  background-size: 300%;
   animation: bg-animation 20s infinite alternate;
+  transition: box-shadow 0.3s;
+  border: white;
+}
+.ftgridcolumn3 button:hover {
+  box-shadow: 0.3px 0.3px 1.5px 1.5px white;
+  cursor: pointer;
 }
 @keyframes bg-animation {
   0% {
@@ -1318,6 +1356,7 @@ a {
   color: white;
   margin: 0;
   margin-bottom: 0.5em;
+  margin-left: 0.25em;
   padding: 0;
   border: 0;
   font-size: 20px;

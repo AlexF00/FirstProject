@@ -7,7 +7,6 @@ var VanillaTilt = (function () {
  * MIT License.
  * Version 1.7.2
  */
-
 class VanillaTilt {
   constructor(element, settings = {}) {
     if (!(element instanceof Node)) {

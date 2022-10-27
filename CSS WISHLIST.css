@@ -17,22 +17,8 @@
     font-size: 4em;
     position: relative;
     padding-bottom: 0.3em;
-    right: 5.7em;
+    right: 5.35em;
   }
-  /*background: linear-gradient(to right, purple, violet, pink, purple);
-  background-clip: content-box;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-size: 200%;
-  animation: background-pan 8s linear infinite;
-  @keyframes background-pan {
-    from {
-      background-position: 0% center;
-    }
-    to {
-      background-position: -200% center;
-    }
-  }*/
   .myWishlist p {
     color: black;
     font-family: Courier;
@@ -44,12 +30,32 @@
     font-size: 1.275em;
     position: relative;
     display: none;
-    right: 16em;
+    right: 14.8em;
+  }
+  .wishlistbutton{
+    background: transparent;
+    position: absolute;
+    display: flex;
+    bottom: -0.5em;
+    left: 15em;
+    height: 3em;
+    width: 3.3em;
+    border: none;
+    margin: none;
+    z-index: 30;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  .Summerwish {
+    align-items: center;
+    justify-content: center;
   }
   .bikinigrid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 2em;
+    row-gap: 5em;
     margin-top: 2em;
     margin-bottom: 2.5em;
   }
@@ -70,7 +76,7 @@
     }
     .bikinigrid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(3, 1fr);
     }
   }
   @media (min-width: 800px) and (max-width: 1024px) {
@@ -82,7 +88,7 @@
     }
     .bikinigrid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
     }
   }
   @media (min-width: 501px) and (max-width: 799px) {
