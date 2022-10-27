@@ -93,9 +93,10 @@ body {
     font-size: 1.1em;
     font-weight: 600;
 }
+/*  "\1F30D"  */
 @counter-style icons {
     system: cyclic;
-    symbols: "\1F451" "\1F50D" "\1F30D" "\1F4E7" "\1F4F1";
+    symbols: "\1F451" "\1F50D" "\1F4E7" "\1F4F1";
     suffix: " ";
 }
 @media (min-width: 1280px) and (max-width: 1700px) {
