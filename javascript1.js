@@ -108,6 +108,7 @@ for (let y = 0; y < wishListButton.length; y++) {
   })
 }
 let bar = document.getElementsByClassName('bikinibar')
+let triangle2 = document.getElementsByClassName('triangle2')
 function searchItems() {
   bar[0].style.display = 'block'
   let input = document.getElementById('searchbar').value
@@ -125,14 +126,17 @@ function searchItems() {
   }
     if (input === "") {
       bar[0].style.display = 'none'
+      triangle2[0].style.display = 'none'
     } else {
       bar[0].style.display = 'grid'
+      triangle2[0].style.display = 'flex'
     }
 }
 document.getElementById('searchbar').addEventListener('click', function() {
   let input = document.getElementById('searchbar').value
   if (input !== '') {
     bar[0].style.display = 'grid'
+    triangle2[0].style.display = 'flex'
   }
 })
 
@@ -141,6 +145,7 @@ document.addEventListener('click', function(f) {
     
   } else {
     bar[0].style.display = 'none'
+    triangle2[0].style.display = 'none'
   }
 });
 function show() {
