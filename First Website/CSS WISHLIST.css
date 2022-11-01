@@ -1,0 +1,127 @@
+.myWishlist {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding-top: 4em;
+    padding-bottom: 1em;
+    width: 100%;
+    text-align: left;
+  }
+  .myWishlist h1 {
+    color: black;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    margin: 0;
+    font-weight: 900;
+    font-size: 4em;
+    position: relative;
+    padding-bottom: 0.3em;
+    right: 5.35em;
+  }
+  .myWishlist p {
+    color: black;
+    font-family: Courier;
+    padding-top: 5em;
+    padding-bottom: 5em;
+    margin: 0;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    font-size: 1.275em;
+    position: relative;
+    display: none;
+    right: 14.8em;
+  }
+  .wishlistbutton{
+    background: transparent;
+    position: absolute;
+    display: flex;
+    bottom: -0.5em;
+    left: 15em;
+    height: 3em;
+    width: 3.3em;
+    border: none;
+    margin: none;
+    z-index: 30;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  .Summerwish {
+    align-items: center;
+    justify-content: center;
+  }
+  .bikinigrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2em;
+    row-gap: 5em;
+    margin-top: 2em;
+    margin-bottom: 2.5em;
+  }
+  #bikini01, #bikini02, #bikini03, #bikini04, #bikini05, #bikini06, #bikini07, #bikini08, #bikini09, #bikini10 {
+    display: none;
+  }
+  .wishlistbutton .gg-crown {
+    color: black;
+    background-color: gold;
+    clip-path: polygon(24% 5px, 50.00% 0.6px, 77% 40.69%, 100% -3.23%, 101% 100%, 48% 107.69%, 0px 96.77%, 0px 2.23%)
+  }
+  @media (min-width: 1025px) and (max-width: 1279px) {
+    .myWishlist h1{
+      right: 3.9em;
+    }
+    .myWishlist p {
+      right: 10.3em;
+    }
+    .bikinigrid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  @media (min-width: 800px) and (max-width: 1024px) {
+    .myWishlist h1{
+      right: 0em;
+    }
+    .myWishlist p {
+      right: 0em;
+    }
+    .bikinigrid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (min-width: 501px) and (max-width: 799px) {
+    .myWishlist h1{
+      right: 0em;
+      font-size: 3.3em;
+      padding: 0;
+    }
+    .myWishlist p {
+      right: 0em;
+      font-size: 1.1em;
+      padding-top: 4em;
+    }
+    .bikinigrid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      scale: 0.9;
+      margin: 0;
+    }
+  }
+  @media (max-width: 500px) {
+    .myWishlist h1 {
+      right: 0;
+      font-size: 2.5em;
+      padding-top: 1em;
+    }
+    .myWishlist p {
+      right: 0;
+      font-size: 0.8em;
+      padding-bottom: 2em;
+    }
+    .bikinigrid {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }

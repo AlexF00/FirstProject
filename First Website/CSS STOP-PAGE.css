@@ -1,0 +1,116 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+html, body {
+    min-height: 100vh;
+    overflow-x: hidden;
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+    user-select: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(45deg, #ec7095 30%, rgb(251, 138, 52) 60%, #FCE043 100%);
+    background-size: 200%;
+    animation: bg-animation 25s infinite alternate;
+}
+@keyframes bg-animation {
+    0% {
+      background-position: left;
+    }
+    100% {
+      background-position: right;
+    }
+}
+.block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+}
+.block h1 {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 30px;
+    font-weight: 900;
+}
+.block p {
+    font-family: Courier;
+    font-size: 20px;
+}
+.block ul {
+    font-family: Courier;
+    font-size: 20px;
+    list-style: icons;
+}
+.block h2 {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 27px;
+    font-weight: 900;
+}
+.linkbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    box-shadow: 2px 2px 3px 3px black;
+    padding: 1em;
+}
+.linkbox span {
+    color: black;
+    font-family: Courier;
+    font-size: 1.1em;
+    font-weight: 600;
+}
+.linkbox a {
+    color: black;
+    font-family: Courier;
+    font-size: 1.1em;
+    font-weight: 600;
+}
+/*  "\1F30D"  */
+@counter-style icons {
+    system: cyclic;
+    symbols: "\1F451" "\1F50D" "\1F4E7" "\1F4F1";
+    suffix: " ";
+}
+@media (min-width: 1280px) and (max-width: 1700px) {
+    .block {
+        scale: 0.9;
+    }
+}
+@media (min-width: 500px) and (max-width: 1279px) {
+    .block {
+        scale: 0.8;
+    }
+}
+@media (max-width: 500px) {
+    .block {
+        scale: 0.7;
+    }
+}
