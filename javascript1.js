@@ -273,15 +273,47 @@ for (let s = 0; s < sizes.length; s++) {
 }
 
 //For bikini arrows functionality and visibility
+
 function show() {
   document.querySelector('.container').style.display = 'flex'
+  document.querySelector('.box1').addEventListener('click', function() {
+    document.querySelector('.grid').scrollBy({top:0, left:-500, behavior:"smooth"})
+  })
+  document.querySelector('.box2').addEventListener('click', function() {
+    document.querySelector('.grid').scrollBy({top:0, left:500, behavior:"smooth"})
+  })
 }
 function hide() {
   document.querySelector('.container').style.display = 'none'
 }
-document.querySelector('.box1').addEventListener('click', function() {
-  document.querySelector('.grid').scrollBy({top:0, left:-500, behavior:"smooth"})
-})
-document.querySelector('.box2').addEventListener('click', function() {
-  document.querySelector('.grid').scrollBy({top:0, left:500, behavior:"smooth"})
-})
+
+//For ActiveSet img visibility
+
+let imgA = document.getElementsByClassName('a')
+let imgB = document.getElementsByClassName('b')
+let imgC = document.getElementsByClassName('c')
+let imgD = document.getElementsByClassName('d')
+function showimg1() {
+  imgA[0].style.display = 'block'
+  imgB[0].style.display = 'none'
+  imgC[0].style.display = 'none'
+  imgD[0].style.display = 'none'
+}
+function showimg2() {
+  imgB[0].style.display = 'block'
+  imgA[0].style.display = 'none'
+  imgC[0].style.display = 'none'
+  imgD[0].style.display = 'none'
+}
+function showimg3() {
+  imgC[0].style.display = 'block'
+  imgB[0].style.display = 'none'
+  imgA[0].style.display = 'none'
+  imgD[0].style.display = 'none'
+}
+function showimg4() {
+  imgD[0].style.display = 'block'
+  imgB[0].style.display = 'none'
+  imgC[0].style.display = 'none'
+  imgA[0].style.display = 'none'
+}

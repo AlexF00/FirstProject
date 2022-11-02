@@ -1084,6 +1084,9 @@ a {
     margin-top: 2em;
     padding: 0;
   }
+  .container {
+    display: none;
+  }
   .grid {
     scale: 0.8;
   }
@@ -1395,6 +1398,9 @@ a {
   .ftgridcolumn3 {
     margin-top: 3em;
     grid-column: span 4;
+  }
+  .container {
+    display: none;
   }
 }
 @media (max-width: 500px) {
