@@ -325,6 +325,9 @@ main {
   flex-direction: column;
   gap: 1em;
 }
+.accountas a {
+  color: black;
+}
 .accountwindow li {
   list-style: none;
   color: black;
@@ -1087,6 +1090,9 @@ a {
   .container {
     display: none;
   }
+  .box1, .box2 {
+    display: none;
+  }
   .grid {
     scale: 0.8;
   }
@@ -1326,6 +1332,9 @@ a {
   transition: box-shadow 0.3s;
   border-width: 1px;
   margin-bottom: 1em;
+  font-family: courier;
+  font-weight: 900;
+  letter-spacing: 0.5px;
 }
 .ftgridcolumn3 input:hover {
   box-shadow: 0 0 5px 0.5px white;
@@ -1345,6 +1354,9 @@ a {
   border-width: 1px;
   resize: none;
   margin-bottom: 1em;
+  padding-top: 0.5em;
+  font-family: courier;
+  font-weight: 900;
 }
 .ftgridcolumn3 textarea:hover {
   box-shadow: 0 0 5px 0.5px white;
@@ -1400,6 +1412,9 @@ a {
     grid-column: span 4;
   }
   .container {
+    display: none;
+  }
+  .box1, .box2 {
     display: none;
   }
 }
