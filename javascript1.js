@@ -61,13 +61,26 @@ function hide5() {
 }
 
 //For visibility of Account dropdown window
-document.addEventListener('click', function(e){
-  if (document.querySelector('.Account').contains(e.target)){
-    document.querySelector('.accountwindow').style.cssText = 'transform: scaleY(1); opacity:100%; visibility:visible';
-  } else {
-    document.querySelector('.accountwindow').style.cssText = 'transform: scaleY(0); opacity:0; visibility:hidden';
+  document.addEventListener('click', function(e){
+    if(window.innerWidth > 500) {
+      if (document.querySelector('.Account').contains(e.target)){
+        document.querySelector('.accountwindow').style.cssText = 'transform: scaleY(1); opacity:100%; visibility:visible; transform-origin:top center;';
+      } else {
+        document.querySelector('.accountwindow').style.cssText = 'transform: scaleY(0); opacity:0; visibility:hidden; transform-origin:top center;';
+      }
+    }
+  });
+  function showwindow() {
+    if(window.innerWidth < 501) {
+      document.querySelector('.accountwindow').style.cssText = 'transform: scaleX(1); opacity:1; visibility:visible; transform-origin:center right;'
+      document.querySelector('body').style.cssText = 'overflow-y: hidden'
+    }
   }
-});
+  document.querySelector('.gg-close').addEventListener('click', function() {
+    document.querySelector('.accountwindow').style.cssText = 'transform: scaleX(0); opacity:0; visibility:hidden; transform-origin:center right;'
+    document.querySelector('body').style.cssText = 'overflow-y: auto'
+  });
+
 
 //For class active and store ids of bikini items
 const wishListStore = []
@@ -182,28 +195,28 @@ function shoppingid7() {
   sessionStorage.setItem('Store', wishListStore)
 }
 
-//For wishlist notifications
+/*For wishlist notifications
 let z = 103
-let x = 103
+let x = 103*/
 for (let k = 0; k < wishListButton.length; k++) {
   wishListButton[k].addEventListener('click', function(){
     if(this.classList.contains('active')) {
-      document.querySelector('.notificationcontainer1').style.cssText = 'transform: scaleY(1);'
+      /*document.querySelector('.notificationcontainer1').style.cssText = 'transform: scaleY(1);'
       document.querySelector('.notificationcontainer1').style.zIndex = z
       z++;
       document.querySelector('.notificationcontainer2').style.cssText = 'transform: scaleY(0);'
       setTimeout(function(){
         document.querySelector('.notificationcontainer1').style.cssText = 'transform: scaleY(0)';
-      }, 3000);
+      }, 3000);*/
       document.getElementsByClassName('gg-crown')[k + 1].style.cssText = 'background-color: gold;'
     } else {
-      document.querySelector('.notificationcontainer2').style.cssText = 'transform: scaleY(1);'
+      /*document.querySelector('.notificationcontainer2').style.cssText = 'transform: scaleY(1);'
       document.querySelector('.notificationcontainer2').style.zIndex = x
       x++;
       document.querySelector('.notificationcontainer1').style.cssText = 'transform: scaleY(0);'
       setTimeout(function(){
         document.querySelector('.notificationcontainer2').style.cssText = 'transform: scaleY(0)';
-      }, 3000);
+      }, 3000);*/
       document.getElementsByClassName('gg-crown')[k + 1].style.cssText = 'background-color: transparent;'
     }
 })}

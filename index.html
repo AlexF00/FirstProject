@@ -12,16 +12,9 @@
         <link href='https://css.gg/crown.css' rel='stylesheet'>
         <link href='https://css.gg/profile.css' rel='stylesheet'>
         <link href='https://css.gg/search.css' rel='stylesheet'>
+        <link href='https://css.gg/close.css' rel='stylesheet'>
     </head>
     <body>
-        <div>
-            <div class="notificationcontainer1">
-                <p class="notificationp1">This item has been added to your wishlist</p>
-            </div>
-            <div class="notificationcontainer2">
-                <p class="notificationp2">This item has been removed from your wishlist</p>
-            </div>
-        </div>
         <div class="Freeshipping">
             <a href="Stop-page.html">
                 <p>FREE SHIPPING AND RETURNS | JOIN NOW!</p>
@@ -644,9 +637,12 @@
                 </div>
                 <div class="Account">
                     <button class="accountbutton" type="submit">
-                        <i class="gg-profile"></i>
+                        <i class="gg-profile" onclick='showwindow()'></i>
                         <div class="accountwindow">
                             <div class="triangle"></div>
+                            <div class="windowicons">
+                                <i class="gg-close"></i>
+                            </div>
                             <div class="accountwindowcontent">
                                 <ul class="accountas">
                                     <li>
