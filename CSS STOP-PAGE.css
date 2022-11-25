@@ -65,7 +65,7 @@ body {
 .block ul {
     font-family: Courier;
     font-size: 20px;
-    list-style: icons;
+    list-style: icons outside;
 }
 .block h2 {
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -80,6 +80,7 @@ body {
     gap: 1em;
     box-shadow: 2px 2px 3px 3px black;
     padding: 1em;
+    text-align: center;
 }
 .linkbox span {
     color: black;
@@ -101,16 +102,67 @@ body {
 }
 @media (min-width: 1280px) and (max-width: 1700px) {
     .block {
-        scale: 0.9;
+        padding: 0em 3em 0em 3em;
+    }
+    .block img {
+        height: 280px;
+        width: 280px;
     }
 }
-@media (min-width: 500px) and (max-width: 1279px) {
+@media (min-width: 551px) and (max-width: 1279px) {
     .block {
-        scale: 0.8;
+        padding: 1.5em 3em 1.5em 3em;
+    }
+    .block img {
+        height: 250px;
+        width: 250px;
+    }
+    .block h1 {
+        font-size: 27px;
+    }
+    .block h2 {
+        font-size: 27px;
+    }
+    .block p {
+        font-size: 18px;
+    }
+    .block ul {
+        font-size: 18px;
+    }
+    .linkbox span {
+        font-size: 1em;
+    }
+    .linkbox a {
+        font-size: 1em;
     }
 }
-@media (max-width: 500px) {
+@media (max-width: 550px) {
+    body {
+        justify-content: unset;
+    }
     .block {
-        scale: 0.7;
+        padding: 1.5em 3em 1.5em 3em;
+    }
+    .block img {
+        height: 250px;
+        width: 250px;
+    }
+    .block h1 {
+        font-size: 25px;
+    }
+    .block h2 {
+        font-size: 25px;
+    }
+    .block p {
+        font-size: 16px;
+    }
+    .block ul {
+        font-size: 16px;
+    }
+    .linkbox span {
+        font-size: 0.8em;
+    }
+    .linkbox a {
+        font-size: 0.8em;
     }
 }

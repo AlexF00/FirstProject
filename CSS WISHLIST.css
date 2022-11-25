@@ -110,6 +110,9 @@
     }
   }
   @media (max-width: 500px) {
+    .myWishlist {
+      padding-top: 1.5em;
+    }
     .myWishlist h1 {
       right: 0;
       font-size: 2.5em;
