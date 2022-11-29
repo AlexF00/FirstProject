@@ -1,5 +1,25 @@
 'use strict';
 
+let imgA = document.getElementsByClassName('a')
+let imgB = document.getElementsByClassName('b')
+let imgC = document.getElementsByClassName('c')
+let imgD = document.getElementsByClassName('d')
+
+//sizes color change
+const sizes = document.getElementsByClassName('sizeli')
+const sizelist = document.getElementsByClassName('sizelist')
+for (let s = 0; s < sizes.length; s++) {
+  sizelist[0].addEventListener('click', function(a) {
+    if (sizes[s].contains(a.target)) {
+      sizes[s].style.cssText = 'background-color: black; color: white;'
+      sizes[s].classList.add('cart')
+    } else {
+      sizes[s].style.cssText = ' '
+      sizes[s].classList.remove('cart')
+    }
+  })
+}
+
 //For dropdown window of .containertop2
 function show1() {
   document.querySelector('.dropdownwindow1').style.cssText = 'transform: scaleY(1); opacity:100%; visibility:visible';
@@ -81,6 +101,26 @@ function hide5() {
     document.querySelector('body').style.cssText = 'overflow-y: auto'
   });
 
+  //For visibility of Menu dropdown window
+  document.addEventListener('click', function(e){
+    if(window.innerWidth > 500) {
+      if (document.querySelector('.Menu').contains(e.target)){
+        document.querySelector('.menuwindow').style.cssText = 'transform: scaleY(1); opacity:100%; visibility:visible; transform-origin:top center;';
+      } else {
+        document.querySelector('.menuwindow').style.cssText = 'transform: scaleY(0); opacity:0; visibility:hidden; transform-origin:top center;';
+      }
+    }
+  });
+  function showwindow2() {
+    if(window.innerWidth < 501) {
+      document.querySelector('.menuwindow').style.cssText = 'transform: scaleX(1); opacity:1; visibility:visible; transform-origin:center right;'
+      document.querySelector('body').style.cssText = 'overflow-y: hidden'
+    }
+  }
+  document.querySelector('#menuclose').addEventListener('click', function() {
+    document.querySelector('.menuwindow').style.cssText = 'transform: scaleX(0); opacity:0; visibility:hidden; transform-origin:center right;'
+    document.querySelector('body').style.cssText = 'overflow-y: auto'
+  });
 
 //For class active and store ids of bikini items
 const wishListStore = []
@@ -270,20 +310,48 @@ document.addEventListener('click', function(f) {
   }
 });
 
-//sizes color change
-const sizes = document.getElementsByClassName('sizeli')
-const sizelist = document.getElementsByClassName('sizelist')
-for (let s = 0; s < sizes.length; s++) {
-  sizelist[0].addEventListener('click', function(a) {
-    if (sizes[s].contains(a.target)) {
-      sizes[s].style.cssText = 'background-color: black; color: white;'
-      sizes[s].classList.add('cart')
+//For menu Searchbar
+
+let bar2 = document.getElementsByClassName('bikinibar2')
+let triangle4 = document.getElementsByClassName('triangle4')
+function searchItems2() {
+  bar2[0].style.display = 'block'
+  let input = document.getElementById('searchbar2').value
+  input = input.toLowerCase();
+  let bikiniItems2 = document.getElementsByClassName('bikinisets2')
+  let bikiniA2 = document.getElementsByClassName('bikinia2')
+  for (let j = 0; j < bikiniItems2.length; j++) {
+    if (bikiniItems2[j].innerHTML.toLowerCase().includes(input)) {
+      bikiniItems2[j].style.display = 'flex'
+      bikiniA2[j].style.display = 'flex'
     } else {
-      sizes[s].style.cssText = ' '
-      sizes[s].classList.remove('cart')
+      bikiniItems2[j].style.display = 'none'
+      bikiniA2[j].style.display = 'none'
     }
-  })
+  }
+    if (input === "") {
+      bar2[0].style.display = 'none'
+      triangle4[0].style.display = 'none'
+    } else {
+      bar2[0].style.display = 'grid'
+      triangle4[0].style.display = 'flex'
+    }
 }
+document.getElementById('searchbar2').addEventListener('click', function() {
+  let input = document.getElementById('searchbar2').value
+  if (input !== '') {
+    bar2[0].style.display = 'grid'
+    triangle4[0].style.display = 'flex'
+  }
+})
+document.addEventListener('click', function(f) {
+  if (document.getElementById('searchbar2').contains(f.target) || bar2[0].contains(f.target)){
+    
+  } else {
+    bar2[0].style.display = 'none'
+    triangle4[0].style.display = 'none'
+  }
+});
 
 //For bikini arrows functionality and visibility
 
@@ -302,10 +370,6 @@ function hide() {
 
 //For ActiveSet img visibility
 
-let imgA = document.getElementsByClassName('a')
-let imgB = document.getElementsByClassName('b')
-let imgC = document.getElementsByClassName('c')
-let imgD = document.getElementsByClassName('d')
 function showimg1() {
   imgA[0].style.display = 'block'
   imgB[0].style.display = 'none'

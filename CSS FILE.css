@@ -240,6 +240,78 @@ main {
 .Menu {
   display: none;
 }
+.gg-menu-right-alt {
+  display: none !important;
+}
+.menuwindow {
+  background-color: white;
+  box-shadow: 0px 0px 3px 0.3px grey;
+  border-radius: 0.5em;
+  width: 20em;
+  top: 5.5em;
+  right: 1.5em;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  transform: scaleY(0);
+  visibility: hidden;
+  transition: transform 150ms, opacity 150ms, visibility 150ms;
+  transform-origin: top center;
+  opacity: 0;
+}
+.menuwindowcontent {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: 2em;
+  text-align: left;
+  padding: 1.5em;
+}
+.triangle3 {
+  position: absolute;
+  background-color: transparent;
+  width: 0em;
+  height: 0em;
+  top: -1.8em;
+  right: 0.9em;
+  border-top: 1em solid transparent;
+  border-right: 1em solid transparent;
+  border-left: 1em solid transparent;
+  border-bottom: 1em solid white;
+}
+.menuas ul {
+  list-style-type: none;
+}
+.Searchbar2 {
+  position: relative;
+}
+.Searchbar2 input {
+  border-radius: 8px;
+  width: 100%;
+  height: 40px;
+}
+.Searchbar2 i {
+  position: absolute;
+  right: 0.8em;
+  bottom: 0.9em;
+  z-index: 100;
+}
+.menuas {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.menuas a {
+  color: black;
+}
+.menuwindow li {
+  list-style: none;
+  color: black;
+  font-size: 1.4em;
+  font-family: courier;
+  border-bottom: 1px solid rgb(229, 231, 235);
+  padding-bottom: 0.5em;
+}
 .dropdownwindow1, .dropdownwindow2, .dropdownwindow3, .dropdownwindow4, .dropdownwindow5 {
   white-space: nowrap;
   position: absolute;
@@ -442,6 +514,57 @@ main {
   border-bottom: 0.1em solid gray;
   padding-bottom: 0.5em;
 }
+.bikinibar2 {
+  background-color: white;
+  position: absolute;
+  top: 3.80em;
+  left: 0em;
+  width: 100%;
+  border-radius: 0.3em;
+  min-width: max-content;
+  display: none;
+  box-shadow: 0px 0px 3px 0.3px grey;
+}
+.barcontent2 {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  gap: 0.8em;
+}
+.bikinibar2 ol {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.3em;
+}
+.bikinisets2 {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  font-weight: 900;
+  min-width: auto;
+}
+.bikinisets2 p {
+  color: black;
+}
+.bikinibar2 a {
+  display: flex;
+  align-items: center;
+  border-radius: 0.3em;
+  gap: 1em;
+}
+.bikinibar2 a:hover {
+  text-decoration-line: underline;
+}
+.bikinibar2 h1 {
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  font-weight: 900;
+  border-bottom: 0.1em solid gray;
+  padding-bottom: 0.5em;
+}
+.bikinia2 li {
+  font-size: 1em;
+}
 @media (min-width: 501px) and (max-width: 1279px) {
   .containertop1 {
     justify-content: left;
@@ -489,7 +612,16 @@ main {
     transition: none;
   }
   .Menu {
-    display: block;
+    display: flex;
+  }
+  .gg-menu-right-alt {
+    display: block !important;
+  }
+  .Searchbar2 {
+    display: flex;
+  }
+  .Searchbar2 i {
+    display: none;
   }
 }
 @media (max-width: 500px) {
@@ -558,6 +690,21 @@ main {
     align-items: flex-end;
     padding: 1.5em;
   }
+  .menuwindow {
+    left:0;
+    right:0;
+    top: 0;
+    bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 0;
+    width: 100vw;
+    height: 101vh;
+    transform: scaleX(0);
+    transform-origin: center right;
+    z-index: 100;
+    transition: transform 500ms, opacity 500ms, visibility 500ms;
+  }
   .accountas {
     padding-top: 0.5em;
     gap: 1.5em;
@@ -576,11 +723,20 @@ main {
     display: none;
   }
   .Menu {
-    display: block;
+    display: flex;
+  }
+  .gg-menu-right-alt {
+    display: block !important;
+  }
+  .Searchbar2 {
+    display: flex;
   }
   .Logoicon img:hover {
     transform: none;
     transition: none;
+  }
+  .bikinibar2 {
+    width: 98%;
   }
 }
 .Thethird {
