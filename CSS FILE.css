@@ -300,6 +300,8 @@ main {
   display: flex;
   flex-direction: column;
   gap: 1em;
+  transition: all 0.5s;
+  transform-origin: center right;
 }
 .menuas a {
   color: black;
@@ -564,6 +566,24 @@ main {
 }
 .bikinia2 li {
   font-size: 1em;
+}
+.menucategories {
+  display: flex;
+  flex-direction: column;
+}
+.Arrivals, .Men, .Women, .Kids, .Sale {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 7em;
+  gap: 1em;
+  transform: scaleX(0);
+  transition: all 0.5s;
+  transform-origin: center right;
+  width: 90%;
+}
+.Arrivals a, .Men a, .Women a, .Kids a, .Sale a {
+  color: black;
 }
 @media (min-width: 501px) and (max-width: 1279px) {
   .containertop1 {
@@ -1345,17 +1365,21 @@ a {
     margin-top: 0em;
   }
   .sport1 {
-    scale: 0.9;
+    width: 96%;
+    margin-top: 0.3em;
   }
   .sport2 {
-    scale: 0.9;
+    width: 96%;
+    margin-top: 0.5em;
   }
   .shopnow2 {
     padding: 0;
   }
   .shopnow2 p {
     font-size: 1.5rem;
+    font-weight: 900;
     margin: 0;
+    margin-top: 0.5em;
   }
   .shopnow2 h1 {
     font-size: 0.8rem;
@@ -1369,7 +1393,9 @@ a {
   }
   .shopnow3 p {
     font-size: 1.5rem;
+    font-weight: 900;
     margin: 0;
+    margin-top: 0.5em;
   }
   .shopnow3 h1 {
     font-size: 0.8rem;
@@ -1533,7 +1559,7 @@ a {
 }
 @media (max-width: 500px) {
   .contacts {
-    margin-top: 2em;
+    margin-top: 1.5em;
   }
   .ftgrid {
     display: grid;

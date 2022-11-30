@@ -120,6 +120,12 @@ function hide5() {
   document.querySelector('#menuclose').addEventListener('click', function() {
     document.querySelector('.menuwindow').style.cssText = 'transform: scaleX(0); opacity:0; visibility:hidden; transform-origin:center right;'
     document.querySelector('body').style.cssText = 'overflow-y: auto'
+    document.querySelector('.menuas').style.cssText = 'transform: scaleX(1); transition-delay:300ms;'
+    document.querySelector('.Arrivals').style.cssText = 'transform: scaleX(0); transition-delay:300ms;'
+    document.querySelector('.Men').style.cssText = 'transform: scaleX(0); transition-delay:300ms;'
+    document.querySelector('.Women').style.cssText = 'transform: scaleX(0); transition-delay:300ms;'
+    document.querySelector('.Kids').style.cssText = 'transform: scaleX(0); transition-delay:300ms;'
+    document.querySelector('.Sale').style.cssText = 'transform: scaleX(0); transition-delay:300ms;'
   });
 
 //For class active and store ids of bikini items
@@ -393,4 +399,27 @@ function showimg4() {
   imgB[0].style.display = 'none'
   imgC[0].style.display = 'none'
   imgA[0].style.display = 'none'
+}
+
+//For mobile menu categories
+
+function arrivals() {
+  document.querySelector('.menuas').style.cssText = 'transform: scaleX(0)'
+  document.querySelector('.Arrivals').style.cssText = 'transform: scaleX(1)'
+}
+function men() {
+  document.querySelector('.menuas').style.cssText = 'transform: scaleX(0)'
+  document.querySelector('.Men').style.cssText = 'transform: scaleX(1)'
+}
+function women() {
+  document.querySelector('.menuas').style.cssText = 'transform: scaleX(0)'
+  document.querySelector('.Women').style.cssText = 'transform: scaleX(1)'
+}
+function kids() {
+  document.querySelector('.menuas').style.cssText = 'transform: scaleX(0)'
+  document.querySelector('.Kids').style.cssText = 'transform: scaleX(1)'
+}
+function sale() {
+  document.querySelector('.menuas').style.cssText = 'transform: scaleX(0)'
+  document.querySelector('.Sale').style.cssText = 'transform: scaleX(1)'
 }
