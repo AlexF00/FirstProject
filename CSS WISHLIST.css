@@ -55,12 +55,17 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 2em;
-    row-gap: 5em;
     margin-top: 2em;
     margin-bottom: 2.5em;
   }
+  .base1, .base2, .base3, .base4, .base5, .base6, .base7 {
+    height: 100%;
+  }
   #bikini01, #bikini02, #bikini03, #bikini04, #bikini05, #bikini06, #bikini07, #bikini08, #bikini09, #bikini10 {
     display: none;
+  }
+  .Summercollection {
+    width: 100%;
   }
   .wishlistbutton .gg-crown {
     color: black;
