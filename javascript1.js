@@ -108,6 +108,12 @@ function hide5() {
         document.querySelector('.menuwindow').style.cssText = 'transform: scaleY(1); opacity:100%; visibility:visible; transform-origin:top center;';
       } else {
         document.querySelector('.menuwindow').style.cssText = 'transform: scaleY(0); opacity:0; visibility:hidden; transform-origin:top center;';
+        document.querySelector('.menuas').style.cssText = 'transform: scaleX(1); transition-delay:300ms;'
+        document.querySelector('.Arrivals').style.cssText = 'transform: scaleX(0); transition-delay:300ms;'
+        document.querySelector('.Men').style.cssText = 'transform: scaleX(0); transition-delay:300ms;'
+        document.querySelector('.Women').style.cssText = 'transform: scaleX(0); transition-delay:300ms;'
+        document.querySelector('.Kids').style.cssText = 'transform: scaleX(0); transition-delay:300ms;'
+        document.querySelector('.Sale').style.cssText = 'transform: scaleX(0); transition-delay:300ms;'
       }
     }
   });
