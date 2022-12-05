@@ -36,8 +36,8 @@
     background: transparent;
     position: absolute;
     display: flex;
-    bottom: -0.5em;
-    left: 15em;
+    top: 0;
+    right: 0;
     height: 3em;
     width: 3.3em;
     border: none;
