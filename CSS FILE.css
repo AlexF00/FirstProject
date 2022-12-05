@@ -604,8 +604,7 @@ main {
     display: none;
   }
   .Searchbar button {
-    margin-right: 17px;
-    scale: 1.1;
+    display: none;
   }
   .Searchbar i:hover {
     transform: scale(1.2);
