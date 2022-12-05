@@ -909,6 +909,7 @@ main {
   box-shadow: 5px 5px white;
 }
 .shopnow1 button {
+  display: flex;
   background: transparent;
   border: none;
   margin: none;
@@ -948,6 +949,7 @@ main {
   overflow: visible;
 }
 .learnmore button {
+  display: flex;
   background: transparent;
   border: none;
   margin: none;
@@ -1131,8 +1133,9 @@ body ::-webkit-scrollbar-track {
   background: transparent;
   position: absolute;
   display: flex;
-  bottom: 2.9em;
-  left: 15em;
+  padding: 0;
+  top: 0;
+  right: 0;
   height: 3em;
   width: 3.3em;
   border: none;
@@ -1296,6 +1299,7 @@ a {
   overflow: visible;
 }
 .shopnow2 button {
+  display: flex;
   background: transparent;
   border: none;
   margin: none;
@@ -1336,6 +1340,7 @@ a {
   overflow: visible;
 }
 .shopnow3 button {
+  display: flex;
   background: transparent;
   border: none;
   margin: none;
