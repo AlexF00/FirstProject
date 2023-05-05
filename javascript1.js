@@ -1,5 +1,7 @@
 'use strict';
 
+let stars = document.querySelectorAll('#gg-crown')
+let starsConv = Array.prototype.slice.call(stars)
 let imgA = document.getElementsByClassName('a')
 let imgB = document.getElementsByClassName('b')
 let imgC = document.getElementsByClassName('c')
@@ -96,7 +98,7 @@ function hide5() {
       document.querySelector('body').style.cssText = 'overflow-y: hidden'
     }
   }
-  document.querySelector('.gg-close').addEventListener('click', function() {
+  document.querySelector('#gg-close').addEventListener('click', function() {
     document.querySelector('.accountwindow').style.cssText = 'transform: scaleX(0); opacity:0; visibility:hidden; transform-origin:center right;'
     document.querySelector('body').style.cssText = 'overflow-y: auto'
   });
@@ -260,7 +262,7 @@ for (let k = 0; k < wishListButton.length; k++) {
       setTimeout(function(){
         document.querySelector('.notificationcontainer1').style.cssText = 'transform: scaleY(0)';
       }, 3000);*/
-      document.getElementsByClassName('gg-crown')[k + 1].style.cssText = 'background-color: gold;'
+      starsConv[k].style.cssText = 'color: gold;'
     } else {
       /*document.querySelector('.notificationcontainer2').style.cssText = 'transform: scaleY(1);'
       document.querySelector('.notificationcontainer2').style.zIndex = x
@@ -269,7 +271,7 @@ for (let k = 0; k < wishListButton.length; k++) {
       setTimeout(function(){
         document.querySelector('.notificationcontainer2').style.cssText = 'transform: scaleY(0)';
       }, 3000);*/
-      document.getElementsByClassName('gg-crown')[k + 1].style.cssText = 'background-color: transparent;'
+      starsConv[k].style.cssText = 'color: black;'
     }
 })}
 
