@@ -165,6 +165,7 @@ main {
 .Searchbar input {
   overflow: hidden;
   background-color: black;
+  color: white;
   border-color: white;
   border-style: solid;
   border-width: thin;
