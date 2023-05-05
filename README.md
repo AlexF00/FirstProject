@@ -1,2 +1,2 @@
 # FirstProject
-First project still WORK IN PROGRESS, Now on desktop, tablet and mobile!
+First project. Now on desktop, tablet and mobile!
